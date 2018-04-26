@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IGoldPriceDao">
+
+	<resultMap type="goldPrice" id="goldPriceMap">
+		<id column="goldID" property="goldId" />
+	</resultMap>
+
+	<select id="selectGoldPrice" parameterType="int" resultMap="goldPriceMap">
+		SELECT * FROM goldPrice WHERE goldID=#{goldId}
+	</select>
+	
+	<select id="selectAllGoldPrice" resultMap="goldPriceMap">
+		SELECT * FROM goldPrice
+	</select>
+
+</mapper>

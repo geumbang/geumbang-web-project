@@ -2,11 +2,18 @@ package model;
 
 public class Logs {
 	
+	private int loggerId;
 	private String dated;
 	private String logger;
 	private String level;
 	private String message;
 	
+	public int getLoggerId() {
+		return loggerId;
+	}
+	public void setLoggerId(int loggerId) {
+		this.loggerId = loggerId;
+	}
 	public String getDated() {
 		return dated;
 	}
@@ -34,7 +41,8 @@ public class Logs {
 	
 	@Override
 	public String toString() {
-		return "Logs [dated=" + dated + ", logger=" + logger + ", level=" + level + ", message=" + message + "]";
+		return "Logs [loggerId=" + loggerId + ", dated=" + dated + ", logger=" + logger + ", level=" + level
+				+ ", message=" + message + "]";
 	}
 
 }

@@ -2,17 +2,17 @@ package model;
 
 public class Reply {
 	
-	private int repltId;
+	private int replyId;
 	private int userId;
 	private int reviewId;
 	private String contents;
 	private String submitDate;
 	
-	public int getRepltId() {
-		return repltId;
+	public int getReplyId() {
+		return replyId;
 	}
-	public void setRepltId(int repltId) {
-		this.repltId = repltId;
+	public void setReplyId(int replyId) {
+		this.replyId = replyId;
 	}
 	public int getUserId() {
 		return userId;
@@ -41,7 +41,7 @@ public class Reply {
 	
 	@Override
 	public String toString() {
-		return "Reply [repltId=" + repltId + ", userId=" + userId + ", reviewId=" + reviewId + ", contents=" + contents
+		return "Reply [replyId=" + replyId + ", userId=" + userId + ", reviewId=" + reviewId + ", contents=" + contents
 				+ ", submitDate=" + submitDate + "]";
 	}
 

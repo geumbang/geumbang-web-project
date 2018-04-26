@@ -23,7 +23,7 @@
  <param name="driver" value="org.mariadb.jdbc.Driver" />
 		<param name="user" value="geumbang" />
 		<param name="password" value="geumbang" /> 
-		<param name="sql" value="INSERT INTO logs VALUES('%d','%C','%p','%m')" />
+		<param name="sql" value="INSERT INTO logs VALUES(0,'%d','%C','%p','%m')" />
 		
 <!-- 		<param name="org.apache.log4j.PatternLayout" /> -->
 	</appender>
