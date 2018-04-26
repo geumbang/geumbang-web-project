@@ -44,5 +44,4 @@ public class Admin {
 		return "Admin [adminId=" + adminId + ", adminEmail=" + adminEmail + ", adminPwd=" + adminPwd + ", adminName="
 				+ adminName + ", adminPhome=" + adminPhome + "]";
 	}
-
 }
