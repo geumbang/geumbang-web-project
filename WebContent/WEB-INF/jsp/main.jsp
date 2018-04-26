@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-성공!! ${ testAdmin.adminName}///////
+메인 페이지 성공!! ${ testAdmin.adminName}///////
 ${ testAllAdmin[0].adminName}
 </body>
 </html>
