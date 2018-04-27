@@ -62,7 +62,7 @@ public class RetailShop {
 	
 	@Override
 	public String toString() {
-		return "retailShop [shopId=" + shopId + ", userId=" + userId + ", shopName=" + shopName + ", adress=" + adress
+		return "RetailShop [shopId=" + shopId + ", userId=" + userId + ", shopName=" + shopName + ", adress=" + adress
 				+ ", ad=" + ad + ", adtime=" + adtime + ", upload=" + upload + ", contact=" + contact + "]";
 	}
 

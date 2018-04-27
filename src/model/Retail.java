@@ -55,7 +55,7 @@ public class Retail {
 	
 	@Override
 	public String toString() {
-		return "retail [userId=" + userId + ", userEmail=" + userEmail + ", userPwd=" + userPwd + ", userName="
+		return "Retail [userId=" + userId + ", userEmail=" + userEmail + ", userPwd=" + userPwd + ", userName="
 				+ userName + ", userAd=" + userAd + ", userPhone=" + userPhone + ", shopId=" + shopId + "]";
 	}
 
