@@ -6,7 +6,7 @@ public class Admin {
 	private String adminEmail;
 	private String adminPwd;
 	private String adminName;
-	private String adminPhome;
+	private String adminPhone;
 	
 	public int getAdminId() {
 		return adminId;
@@ -32,17 +32,17 @@ public class Admin {
 	public void setAdminName(String adminName) {
 		this.adminName = adminName;
 	}
-	public String getAdminPhome() {
-		return adminPhome;
+	public String getAdminPhone() {
+		return adminPhone;
 	}
-	public void setAdminPhome(String adminPhome) {
-		this.adminPhome = adminPhome;
+	public void setAdminPhome(String adminPhone) {
+		this.adminPhone = adminPhone;
 	}
 	
 	@Override
 	public String toString() {
 		return "Admin [adminId=" + adminId + ", adminEmail=" + adminEmail + ", adminPwd=" + adminPwd + ", adminName="
-				+ adminName + ", adminPhome=" + adminPhome + "]";
+				+ adminName + ", adminPhone=" + adminPhone + "]";
 	}
 	
 }

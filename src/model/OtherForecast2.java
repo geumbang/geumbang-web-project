@@ -34,7 +34,7 @@ public class OtherForecast2 {
 	
 	@Override
 	public String toString() {
-		return "OtherForecast1 [forId=" + forId + ", date=" + date + ", forDate=" + forDate + ", forPrice=" + forPrice
+		return "OtherForecast2 [forId=" + forId + ", date=" + date + ", forDate=" + forDate + ", forPrice=" + forPrice
 				+ "]";
 	}
 
