@@ -5,7 +5,7 @@ public class RetailShop {
 	private int shopId;
 	private int userId;
 	private String shopName;
-	private String adress;
+	private String address;
 	private int ad;
 	private String adtime;
 	private String upload;
@@ -29,11 +29,11 @@ public class RetailShop {
 	public void setShopName(String shopName) {
 		this.shopName = shopName;
 	}
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public int getAd() {
 		return ad;
@@ -62,7 +62,7 @@ public class RetailShop {
 	
 	@Override
 	public String toString() {
-		return "RetailShop [shopId=" + shopId + ", userId=" + userId + ", shopName=" + shopName + ", adress=" + adress
+		return "RetailShop [shopId=" + shopId + ", userId=" + userId + ", shopName=" + shopName + ", address=" + address
 				+ ", ad=" + ad + ", adtime=" + adtime + ", upload=" + upload + ", contact=" + contact + "]";
 	}
 
