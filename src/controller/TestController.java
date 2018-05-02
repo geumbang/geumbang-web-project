@@ -82,7 +82,7 @@ public class TestController {
 	private IReviewService rvService;
 	
 	@RequestMapping("test.do")
-	public ModelAndView main() {
+	public ModelAndView test() {
 		
 		Admin admin = aService.selectAdmin(1);
 		List<Admin> adminAll =aService.selectAllAdmin();

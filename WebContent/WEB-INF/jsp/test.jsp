@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Geum Test Page</title>
+<title>Test Page</title>
 </head>
 <body>
-Geumbang Test Page </br> </br>
+<b>Test Page</b> </br> </br>
 
 admin / ${ admin}  </br><%-- / ${ adminAll[0]} </br> --%>
 client / ${ client}  </br><%-- / ${ clientAll[0]} </br> --%>
