@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.ILogsDao">
+
+	<resultMap type="logs" id="logsMap">
+		<id column="loggerID" property="loggerId" />
+	</resultMap>
+
+	<select id="selectLogs" parameterType="int" resultMap="logsMap">
+		SELECT * FROM logs WHERE loggerID=#{loggerId}
+	</select>
+	
+	<select id="selectAllLogs" resultMap="logsMap">
+		SELECT * FROM logs
+	</select>
+
+</mapper>

@@ -62,17 +62,17 @@
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="../images/2.jpg" alt="picture2">
+      <img src="/images/2.jpg" alt="picture2">
     </a>
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="../images/3.jpg" alt="picture3">
+      <img src="/images/3.jpg" alt="picture3">
     </a>
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="../images/4.jpg" alt="picture4">
+      <img src="/images/4.jpg" alt="picture4">
     </a>
   </div>
   

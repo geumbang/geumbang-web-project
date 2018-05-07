@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IOtherForecast2Dao">
+
+	<resultMap type="otherForecast2" id="otherForecast2Map">
+		<id column="forID" property="forId" />
+	</resultMap>
+
+	<select id="selectOtherForecast2" parameterType="int" resultMap="otherForecast2Map">
+		SELECT * FROM otherForecast2 WHERE forID=#{forId}
+	</select>
+	
+	<select id="selectAllOtherForecast2" resultMap="otherForecast2Map">
+		SELECT * FROM otherForecast2
+	</select>
+
+</mapper>
