@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IRetailDao">
+
+	<resultMap type="retail" id="retailMap">
+		<id column="userID" property="userId" />
+		<result column="userPWD" property="userPwd" />
+	</resultMap>
+
+	<select id="selectRetail" parameterType="int" resultMap="retailMap">
+		SELECT * FROM retail WHERE userID=#{userId}
+	</select>
+	
+	<select id="selectAllRetail" resultMap="retailMap">
+		SELECT * FROM retail
+	</select>
+
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IPriceDao">
+
+	<resultMap type="price" id="priceMap">
+		<id column="g_id" property="g_id" />
+		<result column="gold_price" property="gold_price" />
+		<result column="gold_date" property="gold_date" />
+		<result column="ex_rate" property="ex_rate" />
+	</resultMap>
+
+	<insert id="insertPrice" useGeneratedKeys="true" keyProperty="g_id"
+		parameterType="price">
+		INSERT INTO price VALUES(0, #{gold_buy}, #{gold_sell}, #{gold_date}, #{ex_rate})
+	</insert>
+	<delete id="deletePrice" parameterType="int">
+		DELETE FROM price WHERE g_id=#{g_id}
+	</delete>
+
+	<select id="selectPrice" parameterType="int" resultMap="priceMap">
+		SELECT * FROM price WHERE g_id=#{g_id}
+	</select>
+	
+	<select id="selectAllPrice" resultMap="priceMap">
+		SELECT * FROM price
+	</select>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IReplyDao">
+
+	<resultMap type="reply" id="replyMap">
+		<id column="replyID" property="replyId" />
+		<result column="userID" property="userId" />
+		<result column="reviewID" property="reviewId" />
+	</resultMap>
+
+	<select id="selectReply" parameterType="int" resultMap="replyMap">
+		SELECT * FROM reply WHERE replyID=#{replyId}
+	</select>
+	
+	<select id="selectAllReply" resultMap="replyMap">
+		SELECT * FROM reply
+	</select>
+
+</mapper>

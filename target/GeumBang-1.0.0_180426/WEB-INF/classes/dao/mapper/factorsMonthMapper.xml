@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IFactorsMonthDao">
+	<resultMap type="factorsMonth" id="factorsMonthMap">
+	</resultMap>
+
+	<select id="selectRecentGoldPrice" resultMap="factorsMonthMap">
+		select *
+		from(select fm_id, gold_price from factorsM order by fm_id desc limit
+		12) as a order by fm_id asc;
+	</select>
+
+	<select id="selectGoldPriceByYear" parameterType="java.util.HashMap"
+		resultMap="factorsMonthMap">
+		select gold_price from factorsM where k_month LIKE
+		'${k_year}%'
+		order by k_month
+		asc;
+	</select>
+	
+	<select id="selectRecentPriceforYear" parameterType="int" resultMap="factorsMonthMap">
+		select * from factorsM where fm_id = #{fm_id}
+	</select>
+	
+	<select id="selectAllMonth" resultMap="factorsMonthMap">
+		select * from factorsM;
+	</select>
+
+</mapper>

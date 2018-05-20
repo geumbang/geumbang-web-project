@@ -19,10 +19,10 @@
 		
 	</appender>
 	<appender name="db" class="org.apache.log4j.jdbc.JDBCAppender">
-	<param name="URL" value="jdbc:mariadb://geumbang.c6a7gnuk0qhx.ap-northeast-2.rds.amazonaws.com/geumbang" />
- <param name="driver" value="org.mariadb.jdbc.Driver" />
-		<param name="user" value="geumbang" />
-		<param name="password" value="geumbang" /> 
+	<param name="URL" value="jdbc:mysql://keumbang.db.iwinv.net/keumbang" />
+ <param name="driver" value="com.mysql.jdbc.Driver" />
+		<param name="user" value="keumbang" />
+		<param name="password" value="keumbang1004" /> 
 		<param name="sql" value="INSERT INTO logs VALUES(0,'%d','%C','%p','%m')" />
 		
 <!-- 		<param name="org.apache.log4j.PatternLayout" /> -->
