@@ -24,6 +24,7 @@ import model.Retail;
 import service.IAdminService;
 import service.IClientService;
 import service.IDaysForecast20Service;
+import service.IFactorsRecentService;
 import service.IForecastOthersService;
 import service.IForecastService;
 import service.IMonthlyForecast20Service;
@@ -44,6 +45,9 @@ public class MainController {
 	
 	@Autowired
 	private IPriceService pService;
+	
+	@Autowired
+	private IFactorsRecentService frService;
 	
 	@Autowired
 	private IForecastOthersService foService;
@@ -85,6 +89,47 @@ public class MainController {
 	public ModelAndView history() {
 		ModelAndView mav = new ModelAndView();
 		return mav;
+	}
+	
+	@RequestMapping(value = "forecast_others_ajax.do", produces = { "application/json" })
+	public @ResponseBody Map<String, Object> getForecast_Others_ajax_json() {
+		
+		List<ForecastOthers> forecastOthersToday = foService.selectByToday();
+		int sizeToday = forecastOthersToday.size();
+		double exrate = foService.exrate();
+		
+		List<FactorsDaily> byDaily=frService.selectRecentDailyGoldPrice();
+		List<FactorsMonth> byMonth =frService.selectGoldPriceDailyByMonth();
+		List<Forecast> forecast = fService.selectAll();
+		int sizeByDaily =byDaily.size();
+		int sizeByMonth  = byMonth.size();
+		int sizeForecast = forecast.size();
+
+		Map<String, Object> data = new HashMap<>();	
+		
+		List<DaysForecast20> forecast_d = fdService.selectByLatestDate();
+		List<MonthlyForecast20> forecast_m = fmService.selectByLatestDate();
+		int size_d =forecast_d.size();
+		int size_m =forecast_m.size();
+		
+		data.put("forecast_d", forecast_d);
+		data.put("forecast_m", forecast_m);
+		data.put("size_d", size_d);
+		data.put("size_m", size_m);
+		
+		data.put("forecastOthersToday", forecastOthersToday);
+		System.out.println(forecastOthersToday);
+		data.put("sizeToday", sizeToday);
+		data.put("sizeByDaily", sizeByDaily);
+		data.put("sizeByMonth", sizeByMonth);
+		data.put("sizeForecast", sizeForecast);
+		
+		data.put("byDaily", byDaily);
+		data.put("byMonth", byMonth);
+		data.put("forecast", forecast);
+		data.put("exrate", exrate);
+
+		return data;
 	}
 	
 	@RequestMapping("main.do")

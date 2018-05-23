@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>GoldMine</title>
+<title>Keumbang.com</title>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner"
 			style="min-height: 60px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
 			<div class="container">
-				<a class="logo" href="index.do">GoldMine </a>
+				<a class="logo" href="aboutForecast.do">Keumbang.com </a>
 			</div>
 			<div class="container">
 				<a class="btn btn-navbar" data-toggle="collapse"
@@ -19,15 +19,12 @@
 					class="icon-reorder shaded"></i></a>
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav nav-icons">
-						<li><a href="trend.do" style="text-shadow: none;">단어로 보는
-								금의 역사</a></li>
-						<li><a href="news.do" style="text-shadow: none;">금 관련
-								최신뉴스</a></li>
-						<li><a class="brand" href="index.do" style="color: #FFCC00;">GoldMine
+						<li><a href="aboutForecast.do" style="text-shadow: none;">예측시세</a></li>
+						<li><a href="trend.do" style="text-shadow: none;">국제시세</a></li>
+						<li><a class="brand" href="index.do" style="color: #FFCC00;">Keumbang.com
 						</a></li>
-						<li><a href="aboutForecast.do" style="text-shadow: none;">금가격예측서비스</a></li>
-						<li><a href="history.do" style="text-shadow: none;">예측정확도
-								확인하기</a></li>
+						<li><a href="join.do" style="text-shadow: none;">회원가입</a></li>
+						<li><a href="login.do" style="text-shadow: none;">로그인</a></li>
 					</ul>
 				</div>
 			</div>

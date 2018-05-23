@@ -307,66 +307,7 @@ body {
 				}
 			}
 		})
-		/* 금값에 미치는 영향 요인들의 정도를 대략 적으로 % 로 나타낸 수치  */
-		$.ajax({
-			url : 'influence_ajax.do',
-			type : 'get',
-			dataType : 'json',
-			success : function(data) {
-				var chart = new CanvasJS.Chart("chartContainer", {
-					theme : "light2", // "light1", "light2", "dark1", "dark2"
-					exportEnabled : true,
-					animationEnabled : true,
-					data : [ {
-						type : "pie",
-						startAngle : 25,
-						toolTipContent : "<b>{label}</b>: {y}%",
-						showInLegend : "true",
-						legendText : "{label}",
-						indexLabelFontSize : 12,
-						indexLabel : "{label} {y}%",
-						dataPoints : [ {
-							y : data.relative.dow_jones,
-							label : "다우존스 산업지수"
-						}, {
-							y : data.relative.sp_500,
-							label : "S&P 500 지수"
-						}, {
-							y : data.relative.dollar_index,
-							label : "달러 인덱스"
-						}, {
-							y : data.relative.wti,
-							label : "원유"
-						}, {
-							y : data.relative.interest_rate,
-							label : "금리"
-						}, {
-							y : data.relative.gdp,
-							label : "GDP"
-						}, {
-							y : data.relative.inflation,
-							label : "인플레이션"
-						}, {
-							y : data.relative.balance_trade,
-							label : "무역수지"
-						}, {
-							y : data.relative.cpi,
-							label : "소비자 물가 지수"
-						}, {
-							y : data.relative.gold_mine,
-							label : "금 채굴량"
-						}, {
-							y : data.relative.uncertainty,
-							label : "불확실성"
-						}, {
-							y : data.relative.money_stock,
-							label : "통화량"
-						} ]
-					} ]
-				});
-				chart.render();
-			}
-		})
+		
 		$(".forecast_select")
 				.on(
 						'click',
@@ -550,24 +491,82 @@ body {
 	<!-- /navbar -->
 	<div class="center-join3 forecast_img">
 		<div id="space"></div>
-		<div id="space"></div>
-		<div id="space"></div>
-		<span>시대불문 부의 축적수단이자 안전자산의 상징인 금.<br> 이젠 오늘의 시세만 확인하지 말고,
-			미래를 참고하여 거래하세요.
-		</span>
-		<div class="center-square-forecast">
-			본 프로젝트는 금 가격을 예측하기 위해 첫번째로 R을 활용해 단계적회귀분석을 진행하였습니다. 이로 도출된 통계모델의 설명력이
-			86.83% 전후로 산출되어 다음으로 파이썬의 TensorFlow를 이용한 머신러닝을 진행하였습니다. 머신러닝을 통한
-			다중회귀식의 경우 학습률(learning rate)의 값을 수동 입력해야 했고 그 결과 최적의 학습률을 찾는데 어려움을
-			겪었습니다.
-			<p></p>
-			마지막으로 MATLAB의 인공신경망(딥러닝)을 통해 도출된 예측모델의 경우, 20%의 테스트셋이 80%의 학습데이터로
-			만들어진 수식에 99.885%의 정확도로 부합하여 GoldMine의 최종 예측모델로 선택되었습니다.
-		</div>
 	</div>
 	<div class="wrapper">
+	<jsp:include page="leftSide.jsp"></jsp:include>
 		<div class="container">
 			<!--/.span3-->
+			<div class="btn-controls">
+						<br>
+						<div class="btn-box-row row-fluid ">
+							<div class="btn-box big span4 ">
+								<div class="card-container ">
+									<div class="card">
+										<span class="side"> 금(24K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[0]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[6]}원) </span>
+											</p>
+										</span> <span class="side back">금(24K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[1]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[7]}원)</span>
+											</p>
+										</span>
+									</div>
+								</div>
+
+							</div>
+							<div class="btn-box big span4 ">
+								<div class="card-container ">
+									<div class="card">
+										<span class="side"> 금(18K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[2]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[8]}원)</span>
+											</p>
+										</span> <span class="side back">금(18K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[3]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[9]}원)</span>
+											</p>
+										</span>
+									</div>
+								</div>
+
+							</div>
+							<div class="btn-box big span4 ">
+								<div class="card-container ">
+									<div class="card">
+										<span class="side"> 금(14K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[4]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[10]}원)</span>
+											</p>
+										</span> <span class="side back">금(14K) <span class="gray">/3.75g</span><b
+											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
+												때</b>
+											<hr>
+											<p class="text-muted">${goldPriceResult[5]}
+												<span class="gray">원 (전일대비 ${goldPriceResult[11]}원)</span>
+											</p>
+										</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
 			<div class="span12" style="margin: 0 auto; float: initial;">
 				<div class="content">
 					<!-- Forecast -->
@@ -695,11 +694,6 @@ body {
 						</div>
 					</div>
 					<!--/.content-->
-					<div class="module-head">
-						<h3>딥러닝을 통한 금 예측 영향 요인</h3>
-					</div>
-					<div id="chartContainer" style="height: 300px; width: 100%;">
-					</div>
 					<br>
 				</div>
 				<!--/.span9-->
@@ -745,24 +739,12 @@ body {
 	<!--/.wrapper-->
 	<div class="footer">
 		<div class="container">
-			<b class="copyright">&copy; 2018 GoldMine </b>All rights reserved. <br>Team
-			Project by 신진주, 임진리, 한왕석, 황다현
+			<b class="copyright">&copy; 2018 Keumbang.com </b>All rights reserved. 
 		</div>
 	</div>
 
 
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script> -->
-	<!--  <script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	 <script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script> -->
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery-ui-1.10.1.custom.min.js"
