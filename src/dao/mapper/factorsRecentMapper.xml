@@ -6,12 +6,12 @@
 	</resultMap>
 
 	<select id="selectAllFactorsRecent" resultMap="factorsRecentMap">
-		SELECT * FROM factors_recent
+		SELECT * FROM factorsRecent
 	</select>
 
 	<select id="selectFactorsRecent" parameterType="int" resultMap="factorsRecentMap">
 		SELECT *
-		FROM factors_recent WHERE fr_id=#{fr_id}
+		FROM factorsRecent WHERE fr_id=#{fr_id}
 	</select>
 
 </mapper>

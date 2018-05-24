@@ -78,6 +78,34 @@ public class MainController {
 	}
 
 
+	@RequestMapping(value = "index_ajax.do", produces = { "application/json" })
+	public @ResponseBody Map<String, Object> getFactors_ajax_json() {
+		
+		Map<String, Object> data = new HashMap<>();
+		
+		List<FactorsRecent> recentAll = frService.factorsRecentAll();
+		List<FactorsDaily> byDaily=frService.selectRecentDailyGoldPrice();
+		List<FactorsMonth> byMonth =frService.selectGoldPriceDailyByMonth();
+		List<FactorsMonth> byYear = frService.selectRecentPriceforYear();
+		double exrate = foService.exrate();
+		
+		int size = frService.factorsRecentAll().size();
+		int sizeByDaily =byDaily.size();
+		int sizeByMonth  = byMonth.size();
+		int sizeByYear  = byYear.size();
+		
+		data.put("recentAll", recentAll);
+		data.put("size", size);
+		data.put("byDaily", byDaily);
+		data.put("byMonth", byMonth);
+		data.put("byYear", byYear);
+		data.put("sizeByDaily", sizeByDaily);
+		data.put("sizeByMonth", sizeByMonth);
+		data.put("sizeByYear", sizeByYear);
+		data.put("exrate", exrate);
+		
+		return data;
+	}
 
 	@RequestMapping("forecast.do")
 	public ModelAndView forecast() {
@@ -118,7 +146,6 @@ public class MainController {
 		data.put("size_m", size_m);
 		
 		data.put("forecastOthersToday", forecastOthersToday);
-		System.out.println(forecastOthersToday);
 		data.put("sizeToday", sizeToday);
 		data.put("sizeByDaily", sizeByDaily);
 		data.put("sizeByMonth", sizeByMonth);

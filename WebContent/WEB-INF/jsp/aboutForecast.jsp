@@ -489,215 +489,35 @@ body {
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- /navbar -->
-	<div class="center-join3 forecast_img">
 		<div id="space"></div>
-	</div>
+		<div id="space"></div>
 	<div class="wrapper">
 	<jsp:include page="leftSide.jsp"></jsp:include>
 		<div class="container">
 			<!--/.span3-->
-			<div class="btn-controls">
-						<br>
-						<div class="btn-box-row row-fluid ">
-							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(24K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[0]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[6]}원) </span>
-											</p>
-										</span> <span class="side back">금(24K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[1]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[7]}원)</span>
-											</p>
-										</span>
-									</div>
-								</div>
-
-							</div>
-							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(18K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[2]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[8]}원)</span>
-											</p>
-										</span> <span class="side back">금(18K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[3]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[9]}원)</span>
-											</p>
-										</span>
-									</div>
-								</div>
-
-							</div>
-							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(14K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[4]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[10]}원)</span>
-											</p>
-										</span> <span class="side back">금(14K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[5]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[11]}원)</span>
-											</p>
-										</span>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
+			
 			<div class="span12" style="margin: 0 auto; float: initial;">
 				<div class="content">
-					<!-- Forecast -->
-					<div class="module">
-						<div class="module-head">
-							<h3>Today's Weather Forecast for Gold</h3>
-						</div>
-						<div class="module-body" style="text-align: center;">
-							<div class="weather" style="display: inline-block;  vertical-align: top;">
-								<c:choose>
-									<c:when test="${goldPriceForecast[2] eq 'minus'}">
-										<i class="fa icon-umbrella" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px;"></i>
-									</c:when>
-									<c:when test="${goldPriceForecast[2] eq 'plus'}">
-										<i class="fa icon-certificate" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px; color: yellow;"></i>
-									</c:when>
-									<c:otherwise>
-										<i class="fa icon-cloud" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px; color: blue;"></i>
-									</c:otherwise>
-								</c:choose>
-							</div>
-							<div class="fl" style="display: inline-block;  overflow: hidden;  padding-left: 20px;  margin-right: 40px;">
-								<h5>
-									<!-- <span>13</span>시 -->
-									<fmt:formatDate value="${goldprice.gold_date }"
-										pattern="yyyy-MM-dd hh" />
-									시 현재
-								</h5>
-
-								<p>
-									어제보다 <span class="temp">
-									
-										<strong> 
-								 			<c:choose>
-												<c:when test="${goldPriceForecast[2] eq 'minus'}">
-													감소 
-													<i class="fa icon-sort-down" aria-hidden="true"
-														style="line-height: 20px; font-size: 20px; color: red;"></i>
-												</c:when>
-												<c:when test="${goldPriceForecast[2] eq 'plus'}">
-													증가 
-													<i class="fa icon-sort-up" aria-hidden="true"
-														style="line-height: 20px; font-size: 20px; vertical-align: -webkit-baseline-middle; color: blue;"></i>
-												</c:when>
-												<c:otherwise>
-													동등 
-													<i class="fa icon-sort" aria-hidden="true"
-														style="line-height: 20px; font-size: 15px; "></i>
-												</c:otherwise>
-											</c:choose> ${goldPriceForecast[3]}<span>％</span>
-										</strong>
-									
-									</span>  <br>
-									${goldPriceForecast[0]}dollar(살때)
-									
-								</p>
-							</div>
-							<div class="weather" style="display: inline-block;  overflow: hidden;  vertical-align: top;">
-								<c:choose>
-									<c:when test="${goldPriceForecast[5] eq 'minus'}">
-										<i class="fa icon-umbrella" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px;"></i>
-									</c:when>
-									<c:when test="${goldPriceForecast[5] eq 'plus'}">
-										<i class="fa icon-certificate" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px; color: yellow;"></i>
-									</c:when>
-									<c:otherwise>
-										<i class="fa icon-cloud" aria-hidden="true"
-											style="line-height: 100px; font-size: 100px; color: blue;"></i>
-									</c:otherwise>
-								</c:choose>
-							</div>
-							<div class="fl" style="display: inline-block; vertical-align: top; padding-left: 20px;">
-								<h5>
-									${goldPriceForecast[4]} 미래
-								</h5>
-								
-								<p>
-									<fmt:formatDate value="${goldprice.gold_date }"
-										pattern="yyyy-MM-dd hh" />
-									시<br>보다 
-									<span class="temp">
-										<strong> 
-								 			<c:choose>
-												<c:when test="${goldPriceForecast[5] eq 'minus'}">
-													감소 
-													<i class="fa icon-sort-down" aria-hidden="true"
-														style="line-height: 20px; font-size: 20px; color: red;"></i>
-												</c:when>
-												<c:when test="${goldPriceForecast[5] eq 'plus'}">
-													증가 
-													<i class="fa icon-sort-up" aria-hidden="true"
-														style="line-height: 20px; font-size: 20px; vertical-align: -webkit-baseline-middle; color: blue;"></i>
-												</c:when>
-												<c:otherwise>
-													동등 
-													<i class="fa icon-sort" aria-hidden="true"
-														style="line-height: 20px; font-size: 15px; "></i>
-												</c:otherwise>
-											</c:choose> ${goldPriceForecast[6]}<span>％</span>
-										</strong>
-									</span> <br>
-									${goldPriceForecast[7]}dollar(살때)
-								</p>
-
-							</div>
-						</div>
-					</div>
-					<div class="module" style="overflow: hidden">
-						<div class="module-body" style="padding: 0;">
-							<!-- <div class="span4 " style="margin-top:20px; margin-bottom:20px;">
-                                 <div>예측내용</div>
-                                 <hr>
-                                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum, iure necessitatibus ipsum illo quam officiis praesentium mollitia asperiores magnam delectus suscipit qui debitis reprehenderit voluptates deleniti. Aperiam, odit, magnam?</div>
-                             </div>
-                             <div class="span6 " style="margin-top:20px; margin-bottom:20px;">
-                                 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                             </div> -->
-
-
-						</div>
-					</div>
-					<!--/.content-->
-					<br>
 				</div>
 				<!--/.span9-->
 			</div>
+			<div class="module-head">
+				<h3>일별 예측값</h3>
+			</div>
+			<!-- 일별 예측 그래프 -->
+			<div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+			<br>
+			<div class="module-head">
+				<h3>월별 예측값</h3>
+			</div>
+			<!--월별 예측 그래프  -->
+			<div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+			<div class="span12" style="margin: 0 auto; float: initial;">
+				<div class="content">
+				</div>
+				<!--/.span9-->
+			</div>
+			
 			<div class="module-head">
 				<h3>
 					금값 예측
@@ -720,17 +540,6 @@ body {
 				</thead>
 			</table>
 			<br>
-			<div class="module-head">
-				<h3>일별 예측값</h3>
-			</div>
-			<!-- 일별 예측 그래프 -->
-			<div id="chartContainer1" style="height: 300px; width: 100%;"></div>
-			<br>
-			<div class="module-head">
-				<h3>월별 예측값</h3>
-			</div>
-			<!--월별 예측 그래프  -->
-			<div id="chartContainer2" style="height: 300px; width: 100%;"></div>
 		</div>
 		<!--/.container-->
 		<br>

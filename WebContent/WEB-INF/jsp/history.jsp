@@ -39,9 +39,8 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- /navbar -->
-	<div class="center-join2 accuracy_img">
 		<div id="space"></div>
-	</div>
+		<div id="space"></div>
 	<div class="wrapper">
 	<jsp:include page="leftSide.jsp"></jsp:include>
 		<div class="container">

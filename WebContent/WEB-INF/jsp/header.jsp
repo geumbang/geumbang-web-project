@@ -11,7 +11,7 @@
 		<div class="navbar-inner"
 			style="min-height: 60px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
 			<div class="container">
-				<a class="logo" href="aboutForecast.do">Keumbang.com </a>
+				<a class="logo" href="aboutForecast.do">Keumbang.com</a>
 			</div>
 			<div class="container">
 				<a class="btn btn-navbar" data-toggle="collapse"
@@ -20,7 +20,7 @@
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav nav-icons">
 						<li><a href="aboutForecast.do" style="text-shadow: none;">예측시세</a></li>
-						<li><a href="trend.do" style="text-shadow: none;">국제시세</a></li>
+						<li><a href="index.do" style="text-shadow: none;">국제시세</a></li>
 						<li><a class="brand" href="index.do" style="color: #FFCC00;">Keumbang.com
 						</a></li>
 						<li><a href="join.do" style="text-shadow: none;">회원가입</a></li>

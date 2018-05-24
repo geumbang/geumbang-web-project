@@ -386,7 +386,7 @@ $(function() {
 							pointInterval : 1000 * 60 * 60 * 32.75
 						// one hour
 						}, {
-							name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+							name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 							type : 'spline',
 							data : myData2,
 							pointStart : Date.UTC(1989, 0, 1),
@@ -585,7 +585,7 @@ for(var i=0; i<data.size_d;i++){
 								valuePrefix : '￦ '
 							}
 						}, {
-							name : 'GoldMine 예측모델을 사용한 기간별 예측값',
+							name : 'Keumbang.com 예측모델을 사용한 기간별 예측값',
 							type : 'spline',
 							data : forecastOurPrice_m,
 							tooltip : {
@@ -667,7 +667,7 @@ $('.select-session')
 													// one hour
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 														type : 'spline',
 														data : myData2,
 														pointStart : Date.UTC(
@@ -906,7 +906,7 @@ $('.select-session')
 														}
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 예측값',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 예측값',
 														type : 'spline',
 														data : forecastOurPrice_m,
 														tooltip : {
@@ -983,7 +983,7 @@ $('.select-session')
 													// one hour
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 														type : 'spline',
 														data : myData2,
 														pointStart : Date.UTC(
@@ -1222,7 +1222,7 @@ $('.select-session')
 														}
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 예측값',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 예측값',
 														type : 'spline',
 														data : forecastOurPrice_m,
 														tooltip : {
@@ -1298,7 +1298,7 @@ $('.select-session')
 													// one hour
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 														type : 'spline',
 														data : myData2,
 														pointStart : Date.UTC(
@@ -1537,7 +1537,7 @@ $('.select-session')
 														}
 													},
 													{
-														name : 'GoldMine 예측모델을 사용한 기간별 예측값',
+														name : 'Keumbang.com 예측모델을 사용한 기간별 예측값',
 														type : 'spline',
 														data : forecastOurPrice_m,
 														tooltip : {
@@ -1715,7 +1715,7 @@ $('.daily-forecast')
 												// one hour
 												},
 												{
-													name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+													name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 													type : 'spline',
 													data : myData2,
 													pointStart : Date.UTC(1989,
@@ -2108,7 +2108,7 @@ $('.monthly-forecast')
 												// one hour
 												},
 												{
-													name : 'GoldMine 예측모델을 사용한 기간별 금 가격',
+													name : 'Keumbang.com 예측모델을 사용한 기간별 금 가격',
 													type : 'spline',
 													data : myData2,
 													pointStart : Date.UTC(1989,
@@ -2335,7 +2335,7 @@ $('.monthly-forecast')
 													}
 												},
 												{
-													name : 'GoldMine 예측모델을 사용한 기간별 예측값',
+													name : 'Keumbang.com 예측모델을 사용한 기간별 예측값',
 													type : 'spline',
 													data : forecastOurPrice_m,
 													tooltip : {
