@@ -20,52 +20,6 @@
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/member.js"></script>
 <script src="scripts/sha256.js" type="text/javascript"></script>
-<script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
-						checkAll()
-						$('#join_btn')
-								.on(
-										'click',
-										function(e) {
-											e.preventDefault();
-
-											if (document.joinForm.email.value.length == 0
-													&& document.joinForm.name.value.length == 0
-													&& document.joinForm.pwd.value.length == 0
-													&& document.joinForm.pwd_check.value.length == 0) {
-												alert("회원정보를 입력해주세요!")
-												return false;
-											}
-
-											var pwd = SHA256($('#pwd').val());
-											var email = $('#email').val();
-											var name = $('#name').val();
-											$
-													.ajax({
-														url : 'join.do',
-														type : 'POST',
-														dataType : 'json',
-														data : {
-															name : name,
-															email : email,
-															pwd : pwd
-														},
-														success : function(data) {
-															if (data.result == 1) {
-																$(location)
-																		.attr(
-																				'href',
-																				'joinInfo.do');
-															} else {
-																alert("Error : Please retry");
-															}
-														}
-													}); /* ajax 끝 */
-										}); /* 회원가입 버튼 끝 */
-					});
-</script>
 <style>
 body {
 	background-color: black;
