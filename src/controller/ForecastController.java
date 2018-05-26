@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import model.DaysForecast20;
 import model.MonthlyForecast20;
 import model.Price;
+import service.IAccuracyService;
 import service.IDaysForecast20Service;
 import service.IForecastOthersService;
 import service.IForecast_20daysService;
@@ -39,7 +39,7 @@ public class ForecastController {
 	@Autowired
 	private IForecast_20daysService f20Service;
 	
-	@RequestMapping("aboutForecast.do")
+	@RequestMapping("forecast.do")
 	public ModelAndView forecast() {
 		ModelAndView mav = new ModelAndView();
 	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.IAccuracyDao">
+
+	<resultMap type="accuracy" id="accuracyMap">
+		<id column="a_id" property="aId" />
+		<result column="a_date" property="date" />
+		<result column="gold_price" property="goldPrice" />
+		<result column="gold_forecast" property="goldForecast" />
+		<result column="a_error" property="error" />
+	</resultMap>
+
+	<select id="selectAccuracy" parameterType="int" resultMap="accuracyMap">
+		SELECT * FROM accuracy WHERE a_id=#{aId}
+	</select>
+	
+	<select id="selectAllAccuracy" resultMap="accuracyMap">
+		SELECT * FROM accuracy
+	</select>
+
+</mapper>

@@ -125,4 +125,11 @@ public class PriceService implements IPriceService {
 		return goldPriceResult;
 	}
 
+	@Override
+	public List<Price> selectAllGoldPrice() {
+		// TODO Auto-generated method stub
+		List<Price> selectAllGoldPrice = pDao.selectAllPrice();
+		return selectAllGoldPrice;
+	}
+
 }

@@ -19,7 +19,7 @@
 					class="icon-reorder shaded"></i></a>
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav nav-icons">
-						<li><a href="aboutForecast.do" style="text-shadow: none;">예측시세</a></li>
+						<li><a href="forecast.do" style="text-shadow: none;">예측시세</a></li>
 						<li><a href="index.do" style="text-shadow: none;">국제시세</a></li>
 						<li><a class="brand" href="index.do" style="color: #FFCC00;">Keumbang.com
 						</a></li>
