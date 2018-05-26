@@ -5,7 +5,7 @@
 	version="3.0">
   <display-name>GeumBang</display-name>
   <welcome-file-list>
-    <welcome-file>forecast.do</welcome-file>
+    <welcome-file>main.do</welcome-file>
   </welcome-file-list>
   
    <listener>
