@@ -200,8 +200,7 @@ window.onload = function() {
 																	var gold_price = item.forecast_price;
 																	var gold_min = item.forecast_min;
 																	var gold_max = item.forecast_max;
-																	gold_price = gold_price
-																			/ 28.35
+																	gold_price = gold_price/ 31.1035
 																			* 3.75
 																			* exRate;
 																	gold_price = Number(
