@@ -10,6 +10,10 @@ public class Client {
 	private String userLike;
 	private double userWallet;
 	private String userPhone;
+	private int userType;
+	private int oauthType;
+	private String oauthID;
+	private int joinAccept;
 	
 	public int getUserId() {
 		return userId;
@@ -59,12 +63,39 @@ public class Client {
 	public void setUserPhone(String userPhone) {
 		this.userPhone = userPhone;
 	}
+	public int getUserType() {
+		return userType;
+	}
+	public void setUserType(int userType) {
+		this.userType = userType;
+	}
+	public int getOauthType() {
+		return oauthType;
+	}
+	public void setOauthType(int oauthType) {
+		this.oauthType = oauthType;
+	}
+	public String getOauthID() {
+		return oauthID;
+	}
+	public void setOauthID(String oauthID) {
+		this.oauthID = oauthID;
+	}
 	
+	
+	public int getJoinAccept() {
+		return joinAccept;
+	}
+	public void setJoinAccept(int joinAccept) {
+		this.joinAccept = joinAccept;
+	}
 	@Override
 	public String toString() {
 		return "Client [userId=" + userId + ", userEmail=" + userEmail + ", userPwd=" + userPwd + ", userName="
 				+ userName + ", userPay=" + userPay + ", userLike=" + userLike + ", userWallet=" + userWallet
-				+ ", userPhone=" + userPhone + "]";
+				+ ", userPhone=" + userPhone + ", userType=" + userType + ", oauthType=" + oauthType + ", oauthID="
+				+ oauthID + ", joinAccept=" + joinAccept + "]";
 	}
-
+	
+	
 }

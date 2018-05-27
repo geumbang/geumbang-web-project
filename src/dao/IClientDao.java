@@ -6,7 +6,13 @@ import model.Client;
 
 public interface IClientDao {
 	
-	public Client selectClient(int userId);
-	public List<Client> selectAllClient();
+
+	public Integer joinClient(Client client);
+	
+	public Integer isExistClient(String userEmail);
+	
+	public Client getClientInfo(int userID);
+	
+	public Client clientCheck(String userEmail);
 
 }

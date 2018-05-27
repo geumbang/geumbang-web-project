@@ -23,7 +23,7 @@
 						<li><a href="main.do" style="text-shadow: none;">국제시세</a></li>
 						<li><a class="brand" href="main.do" style="color: #FFCC00;">Keumbang.com
 						</a></li>
-						<li><a href="join.do" style="text-shadow: none;">회원가입</a></li>
+						<li><a href="joinForm.do" style="text-shadow: none;">회원가입</a></li>
 						<li><a href="login.do" style="text-shadow: none;">로그인</a></li>
 					</ul>
 				</div>

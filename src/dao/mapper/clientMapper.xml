@@ -3,17 +3,38 @@
 
 <mapper namespace="dao.IClientDao">
 
-	<resultMap type="client" id="clientMap">
-		<id column="userID" property="userId" />
-		<result column="userPWD" property="userPwd" />
-	</resultMap>
 
-	<select id="selectClient" parameterType="int" resultMap="clientMap">
-		SELECT * FROM client WHERE userID=#{userId}
+	<insert id="joinClient" parameterType="client" useGeneratedKeys="true"
+		keyProperty="useID">
+		INSERT INTO client VALUES
+		(0,
+		#{userEmail},
+		#{userPwd},
+		#{userName},
+		#{userPay},
+		#{userLike},
+		#{userWallet},
+		#{userPhone},
+		#{userType},
+		#{oauthType},
+		#{oauthID},
+		#{joinAccept})
+	</insert>
+
+	<select id="isExistClient" parameterType="String" resultType="Integer">
+		select count(*) FROM client WHERE userEmail like #{userEmail}
 	</select>
-	
-	<select id="selectAllClient" resultMap="clientMap">
-		SELECT * FROM client
+
+
+	<select id="clientCheck" parameterType="String" resultType="client">
+		select * from client where userEmail like #{userEmail}
+	</select>
+
+
+	<select id="getClientInfo" parameterType="Integer" resultType="client">
+		select * from client where userID = #{userID}
 	</select>
 
 </mapper>
+
+
