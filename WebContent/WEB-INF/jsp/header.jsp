@@ -24,7 +24,17 @@
 						<li><a href="main.do" style="text-shadow: none;">국제시세</a></li>
 						<li><a class="brand" href="main.do" style="color: #FFCC00;">Keumbang.com
 						</a></li>
+						
+						<c:choose>
+						<c:when test="${empty loginUser }">
 						<li><a href="joinForm.do" style="text-shadow: none;">회원가입</a></li>
+						</c:when>
+						<c:otherwise>
+						<li><a href="#" style="text-shadow: none;">${loginUser.userName} 님 </a></li>
+						</c:otherwise>
+						</c:choose>
+						
+						
 						<c:choose>
 						<c:when test="${empty loginUser }">
 						<li><a href="loginForm.do" style="text-shadow: none;">로그인</a></li>
