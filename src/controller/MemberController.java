@@ -6,7 +6,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -59,13 +61,6 @@ public class MemberController {
 	
 	
 	
-
-	@RequestMapping("joinForm.do")
-	public String loginForm() {	
-		return "joinForm";
-	}
-	
-	
 	
 	@RequestMapping(value = "isExistMember.do", produces = { "application/json" })
 	public @ResponseBody int isExistMember(String email) {
@@ -75,6 +70,12 @@ public class MemberController {
 		return check;
 	}
 	
+	
+	
+	@RequestMapping("joinForm.do")
+	public String joinForm() {	
+		return "joinForm";
+	}
 	
 	
 	@RequestMapping("joinMember.do")
@@ -94,18 +95,18 @@ public class MemberController {
 	
 		if(check== -1) {  //계정이 존재하지않음
 			
-			return "redirect:main.do?code=1";
+			return "redirect:loginForm.do?code=1";
 		}
 		
 		else if (check == 0) { //비밀번호가 맞지않음 
-			return "redirect:main.do?code=2";
+			return "redirect:loginForm.do?code=2";
 		}
 		
 	
 		else { //로그인세션 처리
 		Client loginUser = cService.getClientInfo(check);
 			session.setAttribute("loginUser", loginUser);
-			return "redirect:main.do?code=3";
+			return "redirect:main.do";
 		}
 
 	
@@ -113,4 +114,35 @@ public class MemberController {
 	
 
 
+
+	@RequestMapping("loginForm.do")
+	public String loginForm(Model model,  @RequestParam(defaultValue = "0") int code) {	
+		
+		String msg = null ;
+		if(code==1) {
+		msg ="존재하지 않는 이메일입니다.";
+		}
+		
+		else if(code == 2) {
+		msg ="비밀번호가 맞지 않습니다.";
+		}
+		model.addAttribute("code", code);
+		model.addAttribute("msg", msg);
+		
+		
+		return "loginForm";
+	}
+	
+	
+	
+	
+	@RequestMapping("logout.do")
+	public String logout(HttpSession session) {
+    
+	session.invalidate();
+	
+		return "redirect:main.do";
+	}
+	
+	
 }
