@@ -63,7 +63,7 @@ height : 500px;
 	<!-- /navbar -->
 	<div class="wrapper">
 		<div class="container">
-
+  
 			<div id="loginForm">
 				<span>${msg }</span> <span>${loginUser }</span>
 				<form action="login.do" method="post" name="frm">

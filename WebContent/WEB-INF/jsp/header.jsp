@@ -13,7 +13,7 @@
 			style="min-height: 60px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
 			<div class="container">
 				<a class="logo" href="main.do">Keumbang.com</a>
-			</div>
+			</div>  
 			<div class="container">
 				<a class="btn btn-navbar" data-toggle="collapse"
 					data-target=".navbar-inverse-collapse"> <i

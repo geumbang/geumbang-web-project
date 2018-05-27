@@ -57,7 +57,7 @@ public class MemberController {
     return "join3";
 	}
 	
-	
+	  
 	
 	
 	
