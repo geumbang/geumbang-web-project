@@ -15,7 +15,7 @@ import model.Price;
 import service.IAccuracyService;
 import service.IForecastOthersService;
 import service.IPriceService;
-
+  
 @Controller
 public class MainController {
 	

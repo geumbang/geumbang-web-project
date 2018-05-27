@@ -432,7 +432,7 @@
 				<div class="form-group row" id="joinInDiv">
 					<div class="col-sm-12">
 						<button type="submit" class="btn btn-primary btn-lg btn-block"
-							id="joinInBtn">회 원 가 입</button>
+					 		id="joinInBtn">회 원 가 입</button>
 					</div>
 				</div>
 			</form>

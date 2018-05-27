@@ -51,7 +51,7 @@ public class MemberController {
 	cService.joinClientByOauth(email, name, oauthType);
 	return "join3";
 	}
-
+  
     return "join3";
 	}
 	

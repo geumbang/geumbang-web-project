@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import dao.IClientDao;
 import model.Client;
-
+  
 @Service
 public class ClientService implements IClientService{
 	

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Keumbang.com</title>
 </head>
-<body>
+<body>  
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner"
 			style="min-height: 60px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">

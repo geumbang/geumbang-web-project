@@ -3,7 +3,7 @@ package service;
 import java.util.List;
 
 import model.Client;
-
+  
 public interface IClientService {
 	
 public Client getClientInfo(int userID);

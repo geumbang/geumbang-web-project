@@ -80,7 +80,7 @@ public class Client {
 	}
 	public void setOauthID(String oauthID) {
 		this.oauthID = oauthID;
-	}
+	}  
 	
 	
 	public int getJoinAccept() {

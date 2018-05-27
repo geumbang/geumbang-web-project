@@ -417,7 +417,7 @@
 
 				</div>
 
-				<div class="form-group row" id="re_pwdDiv">
+	 			<div class="form-group row" id="re_pwdDiv">
 
 					<div class="col-sm-7">
 						<label for="inputPassword_re">비밀번호 확인</label> <input
