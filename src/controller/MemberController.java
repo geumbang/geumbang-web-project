@@ -64,9 +64,9 @@ public class MemberController {
 	
 	@RequestMapping(value = "isExistMember.do", produces = { "application/json" })
 	public @ResponseBody int isExistMember(String email) {
-		System.out.println("111");
+	   
 		int check = cService.isExistClient(email);	
-		System.out.println("222");
+
 		return check;
 	}
 	

@@ -28,7 +28,11 @@
 			<mvc:exclude-mapping path="/loginForm.do" />
 			<mvc:exclude-mapping path="/login.do" />
 			<mvc:exclude-mapping path="/joinForm.do" />
-			<mvc:exclude-mapping path="/join.do" />	
+			<mvc:exclude-mapping path="/join.do" />
+			<mvc:exclude-mapping path="/isExistMember.do" />
+			<mvc:exclude-mapping path="/joinMember.do" />
+			
+		
 			<ref bean="loginCheckInterceptor" />
 			<!-- <bean class="controller.LoginCheckInterceptor"></bean> -->
 		</mvc:interceptor> 
