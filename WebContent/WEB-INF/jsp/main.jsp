@@ -95,67 +95,28 @@
 						<br>
 						<div class="btn-box-row row-fluid ">
 							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(24K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
+										<span> </br>금(24K) <span class="gray">/3.75g </span>
 											<hr>
 											<p class="text-muted">${goldPriceResult[0]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[6]}원) </span>
+												<span class="gray">원 (전일대비 ${goldPriceResult[6]}원)</br> &nbsp;</span> 
 											</p>
-										</span> <span class="side back">금(24K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[1]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[7]}원)</span>
-											</p>
-										</span>
-									</div>
-								</div>
-
+										</span> 
 							</div>
 							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(18K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
+										<span class="side"> </br>금(18K) <span class="gray">/3.75g</span>
 											<hr>
 											<p class="text-muted">${goldPriceResult[2]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[8]}원)</span>
+												<span class="gray">원 (전일대비 ${goldPriceResult[8]}원)</br> &nbsp;</span>
 											</p>
-										</span> <span class="side back">금(18K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[3]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[9]}원)</span>
-											</p>
-										</span>
-									</div>
-								</div>
-
+										</span> 
 							</div>
 							<div class="btn-box big span4 ">
-								<div class="card-container ">
-									<div class="card">
-										<span class="side"> 금(14K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">살
-												때</b>
+										<span class="side"> </br>금(14K) <span class="gray">/3.75g</span>
 											<hr>
 											<p class="text-muted">${goldPriceResult[4]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[10]}원)</span>
+												<span class="gray">원 (전일대비 ${goldPriceResult[10]}원)</br> &nbsp;</span>
 											</p>
-										</span> <span class="side back">금(14K) <span class="gray">/3.75g</span><b
-											style="display: inline-block; float: right; margin: 0 35px 0 0;">팔
-												때</b>
-											<hr>
-											<p class="text-muted">${goldPriceResult[5]}
-												<span class="gray">원 (전일대비 ${goldPriceResult[11]}원)</span>
-											</p>
-										</span>
+										</span> 
 									</div>
 								</div>
 
@@ -167,14 +128,14 @@
 					<div class="module">
 						<div class="module-head">
 							<h3>금 연관 요인 기간별 변동 그래프
-							<input type="button" value="1989년 이후 월별"
-								class="select btn btn-default btn-xs" id="monthly-1989">
-							<input type="button" value="최근 10년 월별"
-								class="select btn btn-default btn-xs" id="monthly-10"> <input
-								type="button" value="최근 1년 일별 "
-								class="select btn btn-default btn-xs" id="daily-1"> <input
-								type="button" value="최근 일주일 시간별"
-								class="select btn btn-default btn-xs" id="week-daily-time"> <input
+							<input type="button" value="1989년 이후"
+								class="select btn btn-default btn-xs" id="1989">
+							<input type="button" value="최근 10년"
+								class="select btn btn-default btn-xs" id="10years"> <input
+								type="button" value="최근 1년"
+								class="select btn btn-default btn-xs" id="1year"> <input
+								type="button" value="최근 일주일"
+								class="select btn btn-default btn-xs" id="week"> <input
 								type="button" value="실시간 " class="select btn btn-default btn-xs"
 								id="daily-time">
 							</h3>

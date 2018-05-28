@@ -25,6 +25,7 @@
 			<mvc:mapping path="/**" />
 			<mvc:mapping path="/loginForm.do" />
 			<mvc:exclude-mapping path="/main.do" />
+			<mvc:exclude-mapping path="/main_ajax.do" />
 			<mvc:exclude-mapping path="/loginForm.do" />
 			<mvc:exclude-mapping path="/login.do" />
 			<mvc:exclude-mapping path="/joinForm.do" />
@@ -36,12 +37,7 @@
 			<ref bean="loginCheckInterceptor" />
 			<!-- <bean class="controller.LoginCheckInterceptor"></bean> -->
 		</mvc:interceptor> 
-		
-		<mvc:interceptor>
-			<mvc:mapping path="/adminForm.do" />	
-			<ref bean="loginCheckInterceptor2" />
-			<!-- <bean class="controller.LoginCheckInterceptor"></bean> -->
-		</mvc:interceptor> 
+		 
 	</mvc:interceptors>
 		
 </beans>

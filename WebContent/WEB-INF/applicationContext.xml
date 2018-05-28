@@ -147,6 +147,11 @@
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 		<property name="mapperInterface" value="dao.IAccuracyDao"></property>
 	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean" id="IGoldDailyDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		<property name="mapperInterface" value="dao.IGoldDailyDao"></property>
+	</bean>
 
 	<bean
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"

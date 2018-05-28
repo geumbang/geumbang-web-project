@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import model.Accuracy;
+import model.GoldDaily;
 import model.Price;
-import service.IAccuracyService;
 import service.IForecastOthersService;
+import service.IGoldDailyService;
 import service.IPriceService;
   
 @Controller
@@ -26,7 +27,7 @@ public class MainController {
 	private IForecastOthersService foService;
 	
 	@Autowired
-	private IAccuracyService acService;
+	private IGoldDailyService gdService;
 	
 	@RequestMapping("main.do")
 	public ModelAndView index() {
@@ -50,7 +51,7 @@ public class MainController {
 		
 		Map<String, Object> data = new HashMap<>();
 		
-		List<Accuracy> goldprice_d = acService.selectAllAccuracy();
+		List<GoldDaily> goldprice_d = gdService.selectAllGoldDaily();
 		int size_d = goldprice_d.size();
 		
 		List<Price> goldprice_r = pService.selectAllGoldPrice(); 
@@ -66,8 +67,5 @@ public class MainController {
 		
 		return data;
 	}
-
-	
-	
 
 }

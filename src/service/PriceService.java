@@ -31,7 +31,7 @@ public class PriceService implements IPriceService {
 		List<Price> goldPriceAll = pDao.selectAllPrice();
 		int g_id = goldPriceAll.size();
 		Price goldPrice = pDao.selectPrice(g_id);
-		Price prevGoldPrice = pDao.selectPrice(g_id - 1);
+		Price prevGoldPrice = pDao.selectPrice(g_id - 8);
 
 		double exRate = goldPrice.getEx_rate();
 		double goldBuy = goldPrice.getGold_buy();

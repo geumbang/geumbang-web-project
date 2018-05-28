@@ -43,12 +43,12 @@
 					<div class="module" style="overflow: hidden">
 						<div class="module-head">
 							<span><b style="color: black">Keumbang.com 예측모델을 통한 산출된 값과
-									실제 금 가격 비교 &nbsp;</b></span> <input type="button" value="전체기간"
+									실제 금 가격 비교 &nbsp;</b></span> <!-- <input type="button" value="전체기간"
 								class="select-session btn btn-default btn-xs" id="all">
 							<input type="button" value="최근 10년"
 								class="select-session btn btn-default btn-xs" id="10years">
 							<input type="button" value="최근 1년"
-								class="select-session btn btn-default btn-xs" id="1year">
+								class="select-session btn btn-default btn-xs" id="1year"> -->
 						</div>
 
 						<div class="module-body" style="padding: 0;">

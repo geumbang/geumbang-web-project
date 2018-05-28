@@ -16,15 +16,15 @@ window.onload = function() {
 							var gold_price = item.forecast_price;
 							var gold_min = item.forecast_min;
 							var gold_max = item.forecast_max;
-							gold_price = gold_price / 28.35 * 3.75 * exRate;
+							gold_price = gold_price / 31.1035 * 3.75 * exRate;
 							gold_price = Number(gold_price)
 									.toLocaleString('en').split(".")[0]
 									+ "원";
-							gold_min = gold_min / 28.35 * 3.75 * exRate;
+							gold_min = gold_min / 31.1035 * 3.75 * exRate;
 							gold_min = Number(gold_min).toLocaleString('en')
 									.split(".")[0]
 									+ "원";
-							gold_max = gold_max / 28.35 * 3.75 * exRate;
+							gold_max = gold_max / 31.1035 * 3.75 * exRate;
 							gold_max = Number(gold_max).toLocaleString('en')
 									.split(".")[0]
 									+ "원";
@@ -50,11 +50,14 @@ window.onload = function() {
 							.substring(0, 4);
 					var month = data.forecast_d[i].forecastD_date.substring(5,
 							7);
+					month *= 1;
+					month=month-1;
+					month = String(month);
 					var day = data.forecast_d[i].forecastD_date
 							.substring(8, 10);
 					dataD.x = new Date(year, month, day);
 					gold_price = data.forecast_d[i].forecast_price;
-					gold_price = gold_price / 28.35 * 3.75 * exRate;
+					gold_price = gold_price / 31.1035 * 3.75 * exRate;
 					dataD.y = Math.floor(gold_price, 2)
 					// 리스트에 생성된 객체 삽입
 					daily.push(dataD);
@@ -69,11 +72,14 @@ window.onload = function() {
 							.substring(0, 4);
 					var month = data.forecast_m[i].forecastM_date.substring(5,
 							7);
+					month *= 1;
+					month=month-1;
+					month = String(month);
 					var day = data.forecast_m[i].forecastM_date
 							.substring(8, 10);
 					dataM.x = new Date(year, month, day);
 					gold_price = data.forecast_m[i].forecast_price;
-					gold_price = gold_price / 28.35 * 3.75 * exRate;
+					gold_price = gold_price / 31.1035 * 3.75 * exRate;
 					dataM.y = Math.floor(gold_price, 2)
 					// 리스트에 생성된 객체 삽입
 					monthly.push(dataM);
@@ -90,10 +96,12 @@ window.onload = function() {
 						}
 					},
 					axisY : {
-						title : "금 예측값",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
-						}
+						},
+						maximum : 170000,
+						minimum : 140000
 					},
 					toolTip : {
 						shared : true
@@ -137,10 +145,12 @@ window.onload = function() {
 						}
 					},
 					axisY : {
-						title : "금 예측값",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
-						}
+						},
+						maximum : 190000,
+						minimum : 160000
 					},
 					toolTip : {
 						shared : true
@@ -210,10 +220,10 @@ window.onload = function() {
 																			.split(
 																					".")[0]
 																			+ "원";
-																	gold_min=gold_min/ 28.35
+																	gold_min=gold_min/ 31.1035
 																	* 3.75
 																	* exRate;
-																	gold_max=gold_max/28.35
+																	gold_max=gold_max/31.1035
 																	*3.75
 																	*exRate;
 																	gold_min=Number(
@@ -278,7 +288,7 @@ window.onload = function() {
 																	var gold_min = item.forecast_min;
 																	var gold_max = item.forecast_max;
 																	gold_price = gold_price
-																			/ 28.35
+																			/ 31.1035
 																			* 3.75
 																			* exRate;
 																	gold_price = Number(
@@ -289,7 +299,7 @@ window.onload = function() {
 																					".")[0]
 																			+ "원";
 																	gold_min = gold_min
-																			/ 28.35
+																			/ 31.1035
 																			* 3.75
 																			* exRate;
 																	gold_min = Number(
@@ -300,7 +310,7 @@ window.onload = function() {
 																					".")[0]
 																			+ "원";
 																	gold_max = gold_max
-																			/ 28.35
+																			/ 31.1035
 																			* 3.75
 																			* exRate;
 																	gold_max = Number(
