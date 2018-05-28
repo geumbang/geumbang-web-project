@@ -14,5 +14,5 @@ public interface IClientDao {
 	public Client getClientInfo(int userID);
 	
 	public Client clientCheck(String userEmail);
-
+  
 }

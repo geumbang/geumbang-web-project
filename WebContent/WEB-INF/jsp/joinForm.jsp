@@ -42,7 +42,7 @@
 															.removeClass(
 																	'valid-feedback')
 															.addClass(
-																	'invalid-feedback');
+					   												'invalid-feedback');
 													$("#emailMsg")
 															.html(
 																	'올바른 이메일 형식이 아닙니다.');
@@ -312,6 +312,10 @@
 #joinForm label {
 	display: inline;
 }
+
+#joinTitle{
+text-align: center;
+}
 </style>
 </head>
 <body>
@@ -325,12 +329,9 @@
 				<div class="row" id="container">
 
 
-		<div class="text-center">
-			<h2>회 원 가 입</h2>
-			<p class="lead">Below is an example form built entirely with
-				Bootstrap's form controls. Each required form group has a validation
-				state that can be triggered by attempting to submit the form without
-				completing it.</p>
+		<div class="text-center" id="joinTitle">
+			<h1>회 원 가 입</h1>
+			
 		</div>
 
 

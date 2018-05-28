@@ -3,7 +3,7 @@
    
 <mapper namespace="dao.IClientDao">
 
-
+ 
 	<insert id="joinClient" parameterType="client" useGeneratedKeys="true"
 		keyProperty="useID">
 		INSERT INTO client VALUES
