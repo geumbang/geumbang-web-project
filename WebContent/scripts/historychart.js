@@ -83,7 +83,7 @@ window.onload = function() {
 						name : "실제 금값",
 						markerType : "square",
 						xValueFormatString : "DD MMM, YYYY",
-						color : "#F08080",
+						color : "#05B088",
 						dataPoints : price
 					},{
 						type : "line",
@@ -233,12 +233,12 @@ window.onload = function() {
 						name : "keumbang.com 금값",
 						markerType : "square",
 						xValueFormatString : "DD MMM, YYYY",
-						color : "#F08080",
+						color : "#05B088",
 						dataPoints : forecastOur_d
 					},{
 						type : "line",
 						showInLegend : true,
-						name : "site2 금값",
+						name : "The Economy Forecast Agency 금값",
 						markerType : "square",
 						xValueFormatString : "DD MMM, YYYY",
 						color : "#F08080",
@@ -343,7 +343,7 @@ $('.daily-forecast').click(function() {
 					name : "실제 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
-					color : "#F08080",
+					color : "#05B088",
 					dataPoints : price
 				},{
 					type : "line",
@@ -493,12 +493,12 @@ $('.daily-forecast').click(function() {
 					name : "keumbang.com 일별 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
-					color : "#F08080",
+					color : "#05B088",
 					dataPoints : forecastOur_d
 				},{
 					type : "line",
 					showInLegend : true,
-					name : "site2 금값",
+					name : "The Enonomy Forecast Agency",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#F08080",
@@ -603,7 +603,7 @@ $('.monthly-forecast').click(function() {
 					name : "실제 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
-					color : "#F08080",
+					color : "#05B088",
 					dataPoints : price
 				},{
 					type : "line",
@@ -753,12 +753,12 @@ $('.monthly-forecast').click(function() {
 					name : "keumbang.com 월별 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
-					color : "#F08080",
+					color : "#05B088",
 					dataPoints : forecastOur_m
 				},{
 					type : "line",
 					showInLegend : true,
-					name : "site1 금값",
+					name : "The Economy Forecast Agency 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#F08080",
@@ -766,7 +766,7 @@ $('.monthly-forecast').click(function() {
 				},{
 					type : "line",
 					showInLegend : true,
-					name : "site3 금값",
+					name : "The Financial Forecast Center 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#F08080",

@@ -127,17 +127,17 @@
 					<div id="space"></div>
 					<div class="module">
 						<div class="module-head">
-							<h3>금 연관 요인 기간별 변동 그래프
+							<h3>금 국제시세
 							<input type="button" value="1989년 이후"
 								class="select btn btn-default btn-xs" id="1989">
 							<input type="button" value="최근 10년"
 								class="select btn btn-default btn-xs" id="10years"> <input
 								type="button" value="최근 1년"
 								class="select btn btn-default btn-xs" id="1year"> <input
-								type="button" value="최근 일주일"
-								class="select btn btn-default btn-xs" id="week"> <input
+								type="button" value="최근 1달"
+								class="select btn btn-default btn-xs" id="week"><!--  <input
 								type="button" value="실시간 " class="select btn btn-default btn-xs"
-								id="daily-time">
+								id="daily-time"> -->
 							</h3>
 						</div>
 						<div class="module-body">

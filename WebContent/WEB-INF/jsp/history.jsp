@@ -33,7 +33,6 @@
 		<div id="space"></div>
 		<div id="space"></div>
 	<div class="wrapper">
-	<jsp:include page="leftSide.jsp"></jsp:include>
 		<div class="container">
 			<!--/.span3-->
 			<div class="span12" style="margin: 0 auto; float: initial;">
@@ -42,7 +41,7 @@
 					
 					<div class="module" style="overflow: hidden">
 						<div class="module-head">
-							<span><b style="color: black">Keumbang.com 예측모델을 통한 산출된 값과
+							<span><b style="color: black">Keumbang.com 예측값과
 									실제 금 가격 비교 &nbsp;</b></span> <!-- <input type="button" value="전체기간"
 								class="select-session btn btn-default btn-xs" id="all">
 							<input type="button" value="최근 10년"
@@ -63,7 +62,7 @@
 					<div class="module" style="overflow: hidden">
 
 						<div class="module-head">
-							<span><b style="color: black">Keumbang.com 예측모델을 통한 산출된 값과
+							<span><b style="color: black">Keumbang.com 예측값과
 									타 예측기관 예측값 비교 &nbsp;</b></span> <input type="button" value="일별 예측"
 								class="daily-forecast btn btn-default btn-xs"> <input
 								type="button" value="월별 예측"

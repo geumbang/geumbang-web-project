@@ -8,6 +8,7 @@ public class Price {
 	private double gold_buy;
 	private double gold_sell;
 	private Date gold_date;
+	private String date_result;
 	private Double ex_rate;
 	
 	public int getG_id() {
@@ -34,6 +35,12 @@ public class Price {
 	public void setGold_date(Date gold_date) {
 		this.gold_date = gold_date;
 	}
+	public String getDate_result() {
+		return date_result;
+	}
+	public void setDate_result(String date_result) {
+		this.date_result = date_result;
+	}
 	public Double getEx_rate() {
 		return ex_rate;
 	}
@@ -44,8 +51,6 @@ public class Price {
 	@Override
 	public String toString() {
 		return "Price [g_id=" + g_id + ", gold_buy=" + gold_buy + ", gold_sell=" + gold_sell + ", gold_date="
-				+ gold_date + ", ex_rate=" + ex_rate + "]";
+				+ gold_date + ", date_result=" + date_result + ", ex_rate=" + ex_rate + "]";
 	}
-	
-
 }

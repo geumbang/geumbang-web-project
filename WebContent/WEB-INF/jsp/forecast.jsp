@@ -28,7 +28,6 @@ body {
 		<div id="space"></div>
 		<div id="space"></div>
 	<div class="wrapper">
-	<jsp:include page="leftSide.jsp"></jsp:include>
 		<div class="container">
 			<!--/.span3-->
 			

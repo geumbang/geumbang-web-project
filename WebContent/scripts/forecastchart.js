@@ -168,7 +168,7 @@ window.onload = function() {
 						name : "금 예측값",
 						markerType : "square",
 						xValueFormatString : "DD MMM, YYYY",
-						color : "#F08080",
+						color : "#05B088",
 						dataPoints : daily
 					}/* */]
 				});

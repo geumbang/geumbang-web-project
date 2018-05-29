@@ -1,5 +1,8 @@
 package controller;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,9 +57,15 @@ public class MainController {
 		List<GoldDaily> goldprice_d = gdService.selectAllGoldDaily();
 		int size_d = goldprice_d.size();
 		
-		List<Price> goldprice_r = pService.selectAllGoldPrice(); 
+		List<Price> goldprice_r = pService.selectAllGoldPrice();
 		int size_r =goldprice_r.size();
 		
+		for(int i=0;i<size_r;i++) {
+			Date date_r = goldprice_r.get(i).getGold_date();
+			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String date_r_result = df.format(date_r);
+			goldprice_r.get(i).setDate_result(date_r_result);
+		}
 		double exrate = foService.exrate();
 		
 		data.put("goldprice_d", goldprice_d);
