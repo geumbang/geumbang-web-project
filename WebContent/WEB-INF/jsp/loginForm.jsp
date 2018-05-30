@@ -31,6 +31,7 @@
 #space {
 	width: 1px;
 	height: 30px;
+	margin: 0 auto;
 }
 
 #msgDiv {

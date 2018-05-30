@@ -41,8 +41,7 @@
 					
 					<div class="module" style="overflow: hidden">
 						<div class="module-head">
-							<span><b style="color: black">Keumbang.com 예측값과
-									실제 금 가격 비교 &nbsp;</b></span> <!-- <input type="button" value="전체기간"
+							<span><b style="color: black">Keumbang.com 예측값 vs 실제 금값 &nbsp;</b></span> <!-- <input type="button" value="전체기간"
 								class="select-session btn btn-default btn-xs" id="all">
 							<input type="button" value="최근 10년"
 								class="select-session btn btn-default btn-xs" id="10years">
@@ -62,8 +61,7 @@
 					<div class="module" style="overflow: hidden">
 
 						<div class="module-head">
-							<span><b style="color: black">Keumbang.com 예측값과
-									타 예측기관 예측값 비교 &nbsp;</b></span> <input type="button" value="일별 예측"
+							<span><b style="color: black">Keumbang.com 예측값 vs 타 예측기관 예측값 &nbsp;</b></span> <input type="button" value="일별 예측"
 								class="daily-forecast btn btn-default btn-xs"> <input
 								type="button" value="월별 예측"
 								class="monthly-forecast btn btn-default btn-xs">

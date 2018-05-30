@@ -44,7 +44,7 @@ window.onload = function() {
 						}
 					},
 					axisY : {
-						title : "금 국제시세",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
 						},
@@ -126,14 +126,14 @@ $('.select').click(function() {
 				animationEnabled : true,
 				theme : "light2",
 				axisX : {
-					valueFormatString : "DD MMM",
+					valueFormatString : "YYYY",
 					crosshair : {
 						enabled : true,
 						snapToDataPoint : true
 					}
 				},
 				axisY : {
-					title : "금 국제시세",
+					title : "Gold Price",
 					crosshair : {
 						enabled : true
 					}
@@ -208,14 +208,14 @@ $('.select').click(function() {
 					animationEnabled : true,
 					theme : "light2",
 					axisX : {
-						valueFormatString : "DD MMM",
+						valueFormatString : "YYYY",
 						crosshair : {
 							enabled : true,
 							snapToDataPoint : true
 						}
 					},
 					axisY : {
-						title : "금 국제시세",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
 						}
@@ -315,14 +315,14 @@ $('.select').click(function() {
 					animationEnabled : true,
 					theme : "light2",
 					axisX : {
-						valueFormatString : "DD MMM",
+						valueFormatString : "MMM",
 						crosshair : {
 							enabled : true,
 							snapToDataPoint : true
 						}
 					},
 					axisY : {
-						title : "금 국제시세",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
 						},
@@ -407,7 +407,7 @@ $('.select').click(function() {
 						}
 					},
 					axisY : {
-						title : "금 국제시세",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
 						},
@@ -492,7 +492,7 @@ $('.select').click(function() {
 						}
 					},
 					axisY : {
-						title : "금 국제시세",
+						title : "Gold Price",
 						crosshair : {
 							enabled : true
 						},
