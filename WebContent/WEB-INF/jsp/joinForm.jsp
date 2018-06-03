@@ -90,6 +90,11 @@ color : blue;
 .invalid-feedback{
 color : red;
 }
+
+#personal{
+background-color: #ffffff;
+
+}
 </style>
 </head>
 <body>
@@ -108,11 +113,12 @@ color : red;
 			
 		</div>
 
-
+  
 		<div id="joinFormDiv" class="col-12">
 			<form action="joinMember.do" method="post" name="frm">
 				<div class="col-12 border">
 					<div id="personal">
+					<br>
 						<span> <h4>제15조(개인정보의 수집ㆍ이용)</h4> <b><h5>① 개인정보처리자는 다음 각 호의 어느 하나에 해당하는
 							경우에는 개인정보를 수집할 수 있으며 그 수집 목적의 범위에서 이용할 수 있다.</h5>1. 정보주체의 동의를 받은 경우
 							</br>2. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우 </br>3. 공공기관이 법령 등에서 정하는
@@ -126,6 +132,7 @@ color : red;
 							서비스 제공을 목적 </br>2. 수집하려는 개인정보의 항목 휴대전화번호,이름,사업자등록사본,ID </br>3. 개인정보의 보유 및
 							이용 기간 회원 탈퇴 시까지 보유 </br>4. 동의를 거부할 권리가 있다는 사실 및 동의 거부에 따른 불이익이 있는 경우에는
 							그 불이익의 내용</b> </span>
+								<br>
 					</div>
 					<hr>
 					<div class="form-group row">
