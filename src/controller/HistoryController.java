@@ -12,16 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.Accuracy;
 import model.DaysForecast20;
-import model.FactorsDaily;
-import model.FactorsMonth;
-import model.Forecast;
 import model.ForecastOthers;
 import model.MonthlyForecast20;
 import service.IAccuracyService;
 import service.IDaysForecast20Service;
-import service.IFactorsRecentService;
 import service.IForecastOthersService;
-import service.IForecastService;
 import service.IMonthlyForecast20Service;
 
 @Controller
@@ -32,12 +27,6 @@ public class HistoryController {
 	
 	@Autowired
 	private IAccuracyService acService;
-	
-	@Autowired
-	private IFactorsRecentService frService;
-	
-	@Autowired
-	private IForecastService fService;
 	
 	@Autowired
 	private IDaysForecast20Service fdService;
@@ -67,13 +56,6 @@ public class HistoryController {
 		List<ForecastOthers> forecastOthersToday = foService.selectByToday();
 		int sizeToday = forecastOthersToday.size();
 		
-		List<FactorsDaily> byDaily=frService.selectRecentDailyGoldPrice();
-		List<FactorsMonth> byMonth =frService.selectGoldPriceDailyByMonth();
-		List<Forecast> forecast = fService.selectAll();
-		int sizeByDaily =byDaily.size();
-		int sizeByMonth  = byMonth.size();
-		int sizeForecast = forecast.size();
-		
 		List<DaysForecast20> forecast_d = fdService.selectByLatestDate();
 		List<MonthlyForecast20> forecast_m = fmService.selectByLatestDate();
 		int size_d =forecast_d.size();
@@ -86,13 +68,6 @@ public class HistoryController {
 		
 		data.put("forecastOthersToday", forecastOthersToday);
 		data.put("sizeToday", sizeToday);
-		data.put("sizeByDaily", sizeByDaily);
-		data.put("sizeByMonth", sizeByMonth);
-		data.put("sizeForecast", sizeForecast);
-		
-		data.put("byDaily", byDaily);
-		data.put("byMonth", byMonth);
-		data.put("forecast", forecast);
 		
 		return data;
 	}
