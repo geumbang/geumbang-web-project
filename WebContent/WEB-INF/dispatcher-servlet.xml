@@ -32,6 +32,7 @@
 			<mvc:exclude-mapping path="/join.do" />
 			<mvc:exclude-mapping path="/isExistMember.do" />
 			<mvc:exclude-mapping path="/joinMember.do" />
+			<mvc:exclude-mapping path="/joinSuccess.do" />
 			
 		
 			<ref bean="loginCheckInterceptor" />

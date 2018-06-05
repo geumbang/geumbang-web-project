@@ -78,10 +78,15 @@ public class MemberController {
 	}
 	
 	
-	@RequestMapping("joinMember.do")
-	public String joinMember(Client client) {	
-     int userKey = cService.joinClient(client);
+	@RequestMapping("joinSuccess.do")
+	public String joinSuccess() {	
 		return "joinSuccess";
+	}
+	
+	@RequestMapping("joinMember.do")
+	public String joinMember(Client client, String code) {	
+     int userKey = cService.joinClient(client);
+		return "redirect:joinSuccess.do";
 	}
 	
 	

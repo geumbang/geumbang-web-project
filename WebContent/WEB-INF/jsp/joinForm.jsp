@@ -112,6 +112,7 @@
 
 					<div id="joinFormDiv" class="col-12">
 						<form action="joinMember.do" method="post" name="frm">
+						<input type="hidden" name="code" value="keumbang_login_codeString">
 							<div class="col-12 border">
 								<div id="personal">
 									<br> <span>
