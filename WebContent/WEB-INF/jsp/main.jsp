@@ -134,7 +134,7 @@
 							<small> <input type="button" value="1989년 이후"
 								class="select btn btn-light btn-sm inBtn" id="1989"> <input
 								type="button" value="최근 10년"
-								class="select btn btn-lightt btn-sm inBtn" id="10years">
+								class="select btn btn-light btn-sm inBtn" id="10years">
 								<input type="button" value="최근 1년"
 								class="select btn btn-light btn-sm inBtn" id="1year"> <input
 								type="button" value="최근 1달"
