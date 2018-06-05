@@ -7,15 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keumbang.com</title>
 <link rel="stylesheet" href="css/reset.css">
-<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link type="text/css" href="css/theme.css" rel="stylesheet">
 <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
-<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/sha256.js" type="text/javascript"></script>
 <style>
-body {
-	background-color: black;
+.wrapper{
+border-top : 1px solid black;
 }
 </style>
 
@@ -24,9 +21,8 @@ body {
 
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<!-- /navbar -->
-		<div id="space"></div>
-		<div id="space"></div>
+
+		
 	<div class="wrapper">
 		<div class="container">
 			<!--/.span3-->
@@ -80,11 +76,7 @@ body {
 		<br>
 	</div>
 
-	<div class="footer">
-		<div class="container">
-			<b class="copyright">&copy; 2018 Keumbang.com </b>All rights reserved.
-		</div>
-	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 	
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

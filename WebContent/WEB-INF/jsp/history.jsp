@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keumbang.com</title>
 <link rel="stylesheet" href="css/reset.css">
-<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
 <link type="text/css" href="css/theme.css" rel="stylesheet">
 <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 
@@ -24,14 +23,16 @@
 .highcharts-title {
 	display: none;
 }
+
+.wrapper{
+border-top : 1px solid black;
+}
 </style>
 
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<!-- /navbar -->
-		<div id="space"></div>
-		<div id="space"></div>
+
 	<div class="wrapper">
 		<div class="container">
 			<!--/.span3-->
@@ -84,11 +85,8 @@
 	</div>
 
 	<!--/.wrapper-->
-	<div class="footer">
-		<div class="container">
-			<b class="copyright">&copy; 2018 Keumbang.com </b>All rights reserved. 
-		</div>
-	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
+	
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

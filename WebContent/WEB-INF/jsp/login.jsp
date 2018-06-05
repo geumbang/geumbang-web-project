@@ -7,11 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keumbang.com</title>
 <link rel="stylesheet" href="css/reset.css">
-<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link type="text/css" href="css/theme.css" rel="stylesheet">
 <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
-<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+
 <script>
 	$(document).ready(function() {
 
