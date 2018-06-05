@@ -51,9 +51,7 @@ padding : 40px;
 
 
 			<form class="form-signin" action="login.do" method="post" name="frm">
-				<img class="mb-4"
-					src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg"
-					alt="" width="72" height="72">
+				
 				<h2 class="h3 mb-3 font-weight-normal">KEUMBANG 회원이신가요? </h2>
 			    <hr>
 				<div id="msgDiv" class="text-danger">${msg }</div>
