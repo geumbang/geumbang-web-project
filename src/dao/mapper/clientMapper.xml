@@ -18,7 +18,8 @@
 		#{userType},
 		#{oauthType},
 		#{oauthID},
-		#{joinAccept})
+		#{joinAccept},
+		now())
 	</insert>
 
 	<select id="isExistClient" parameterType="String" resultType="Integer">

@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Timestamp;
+
 public class Client {  
 	
 	private int userId;
@@ -14,6 +16,7 @@ public class Client {
 	private int oauthType;
 	private String oauthID;
 	private int joinAccept;
+	private Timestamp joinDate;
 	
 	public int getUserId() {
 		return userId;
@@ -89,13 +92,22 @@ public class Client {
 	public void setJoinAccept(int joinAccept) {
 		this.joinAccept = joinAccept;
 	}
+	
+	
+	public Timestamp getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate(Timestamp joinDate) {
+		this.joinDate = joinDate;
+	}
 	@Override
 	public String toString() {
 		return "Client [userId=" + userId + ", userEmail=" + userEmail + ", userPwd=" + userPwd + ", userName="
 				+ userName + ", userPay=" + userPay + ", userLike=" + userLike + ", userWallet=" + userWallet
 				+ ", userPhone=" + userPhone + ", userType=" + userType + ", oauthType=" + oauthType + ", oauthID="
-				+ oauthID + ", joinAccept=" + joinAccept + "]";
+				+ oauthID + ", joinAccept=" + joinAccept + ", joinDate=" + joinDate + "]";
 	}
+	
 	
 	
 }
