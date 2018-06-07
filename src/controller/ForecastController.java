@@ -12,13 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.DaysForecast20;
 import model.MonthlyForecast20;
-import model.Price;
-import service.IAccuracyService;
 import service.IDaysForecast20Service;
 import service.IForecastOthersService;
-import service.IForecast_20daysService;
 import service.IMonthlyForecast20Service;
-import service.IPriceService;
 
 @Controller
 public class ForecastController {
@@ -32,12 +28,6 @@ public class ForecastController {
 	
 	@Autowired
 	private IForecastOthersService foService;
-	
-	@Autowired
-	private IPriceService pService;
-	
-	@Autowired
-	private IForecast_20daysService f20Service;
 	
 	@RequestMapping("forecast.do")
 	public ModelAndView forecast() {
@@ -53,11 +43,6 @@ public class ForecastController {
 		mav.addObject("size_d", size_d);
 		mav.addObject("size_m", size_m);
 		
-		//날씨
-		Price goldprice = pService.goldPrice();
-		List<String> goldPriceForecast = f20Service.goldPriceForecast();
-		mav.addObject("goldprice",goldprice);
-		mav.addObject("goldPriceForecast",goldPriceForecast);
 		return mav;
 	}
 	

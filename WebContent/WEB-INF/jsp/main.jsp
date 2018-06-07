@@ -130,16 +130,16 @@
 						class="d-flex align-items-center p-2 my-3 bg-warning rounded box-shadow">
 
 						<div class="lh-100">
-							<h2 class="mb-0 lh-100">금 국제시세 &nbsp;</h2>
-							<small> <input type="button" value="1989년 이후"
-								class="select btn btn-light btn-sm inBtn" id="1989"> <input
-								type="button" value="최근 10년"
-								class="select btn btn-light btn-sm inBtn" id="10years">
-								<input type="button" value="최근 1년"
-								class="select btn btn-light btn-sm inBtn" id="1year"> <input
-								type="button" value="최근 1달"
-								class="select btn btn-light btn-sm inBtn" id="week">
-							</small>
+							<h2 class="mb-0 lh-100">금 국제시세 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+							<div class="btn-group" role="group" aria-label="method">
+							<button type="button" class="select btn btn-light btn-warning btn-sm inBtn" id="1989">1989년 이후</button><button
+								type="button"
+								class="select btn btn-light btn-warning btn-sm inBtn" id="10years">최근 10년</button>
+								<button type="button"
+								class="select btn btn-light btn-warning btn-sm inBtn" id="1year">최근 1년</button><button
+								type="button"
+								class="select btn btn-light btn-warning btn-sm inBtn" id="week">최근 1달</button></div>
+							</h2> 
 
 						</div>
 

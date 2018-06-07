@@ -99,6 +99,8 @@
 				href="forecast.do">예측시세 <span class="sr-only">(current)</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link" href="history.do">신뢰도</a></li>
+			<li class="nav-item"><a class="nav-link" href="payment.do">상품구매</a></li>
+			
 
 
 
