@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.Admin;
 import model.Client;
+import model.NaverClient;
 import model.Retail;
 import service.IAdminService;
 import service.IClientService;
@@ -32,16 +33,30 @@ public class MemberController {
 	@Autowired
 	private IRetailService rService;
 	
+	@RequestMapping("loginNaver.do")
+	public  String loginNaver(HttpSession session, String userId, String email, String userName) {
+		
+		System.out.println(userName);
+		
+		NaverClient client = new NaverClient();
+		client.setUserId(userId);
+		client.setUserEmail(email);
+		client.setUserName(userName);
+		
+		session.setAttribute("loginUser", client);
+		return "redirect:main.do";
 	
+	}
 	
+	@RequestMapping("callback.do")
+	public String callback() {	
+		return "callback";
+	}
 	
 	@RequestMapping("join2.do")
 	public String join2() {	
 		return "join2";
 	}
-
-	
-	
 	
 	//로그인API처리 
 	@RequestMapping("joinClientByOauth.do")

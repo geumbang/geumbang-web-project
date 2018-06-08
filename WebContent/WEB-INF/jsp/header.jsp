@@ -113,7 +113,7 @@
 							href="joinForm.do">회원가입</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="#">${loginUser.userName}
+						<li class="nav-item"><a class="nav-link" href="#">${loginUser.userName }
 								님 </a></li>
 
 					</c:otherwise>

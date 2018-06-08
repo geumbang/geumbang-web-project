@@ -67,7 +67,7 @@ padding : 40px;
 						Remember me
 					</label>
 				</div>
-				
+				<div id="naverIdLogin"></div></br>
 				<button class="btn btn-lg btn-primary btn-block" type="submit"
 					id="loginBtn">로그인</button>
 				<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
@@ -96,7 +96,7 @@ padding : 40px;
 	<script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
 	<script src="scripts/datatables/jquery.dataTables.js"
 		type="text/javascript"></script>
-	<script src="scripts/mainchart.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -125,6 +125,22 @@ padding : 40px;
 			}
 
 		});
+	</script>
+	<script type="text/javascript">
+		var naverLogin = new naver.LoginWithNaverId({
+			clientId : "nVEqlZN8RaXPEqCIczNM",
+			callbackUrl : "http://localhost:8080/GeumBang/callback.do",
+			isPopup : false, /* 팝업을 통한 연동처리 여부 */
+			loginButton : {
+				color : "green",
+				type : 3,
+				height : 60
+			}
+		/* 로그인 버튼의 타입을 지정 */
+		});
+
+		/* 설정정보를 초기화하고 연동을 준비 */
+		naverLogin.init();
 	</script>
 </body>
 </html>
