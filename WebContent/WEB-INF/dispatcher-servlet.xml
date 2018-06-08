@@ -32,6 +32,7 @@
 			<mvc:exclude-mapping path="/loginNaver.do" />
 			<mvc:exclude-mapping path="/loginKakao.do" />
 			<mvc:exclude-mapping path="/callbackKakao.do" />
+			<mvc:exclude-mapping path="/myPage.do"/>
 			
 		
 			<ref bean="loginCheckInterceptor" />

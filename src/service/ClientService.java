@@ -1,5 +1,6 @@
 package service;
   
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,7 +82,7 @@ public class ClientService implements IClientService{
 	}
 
 	@Override
-	public void updateClient(Client client) {
+	public void updateClient(HashMap<String, Object> updatedClient) {
 		// TODO Auto-generated method stub
 		
 	}

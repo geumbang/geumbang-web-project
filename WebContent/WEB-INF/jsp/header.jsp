@@ -8,6 +8,9 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+<!-- Font Awesome's web fonts and CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -113,7 +116,7 @@
 							href="joinForm.do">회원가입</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="#">${loginUser.userName }
+						<li class="nav-item"><a class="nav-link" href="myPage.do">${loginUser.userName }
 								님 </a></li>
 
 					</c:otherwise>

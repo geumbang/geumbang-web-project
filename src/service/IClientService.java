@@ -1,12 +1,13 @@
 package service;
 
+import java.util.HashMap;
 import java.util.List;  
 
 import model.Client;
   
 public interface IClientService {
 	
-public Client getClientInfo(int userID);
+	public Client getClientInfo(int userID);
 	
 	public int isExistClient(String userEmail);
 	
@@ -17,7 +18,7 @@ public Client getClientInfo(int userID);
 
 	
 	public List<Client> selectAllClient();
-	public void updateClient(Client client);
+	public void updateClient(HashMap<String, Object> updatedClient);
 	public void joinClientByOauth(String email, String name,int oauthType);
 
 
