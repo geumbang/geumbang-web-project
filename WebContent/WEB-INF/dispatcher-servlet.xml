@@ -15,11 +15,6 @@
 	</bean>
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<mvc:interceptors>
-		<mvc:interceptor>
-			<mvc:mapping path="/**" />
-			<bean class="controller.LoggingInterceptor"></bean>
-		</mvc:interceptor>
-
 
 	 <mvc:interceptor>
 			<mvc:mapping path="/**" />
