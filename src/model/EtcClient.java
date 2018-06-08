@@ -1,6 +1,6 @@
 package model;
 
-public class NaverClient {  
+public class EtcClient {  
 	
 	private String userId;
 	private String userEmail;

@@ -11,8 +11,6 @@
 <link type="text/css" href="images/icons/css/font-awesome.css"
 	rel="stylesheet">
 <style>
-
-
 #space {
 	width: 1px;
 	height: 30px;
@@ -25,11 +23,9 @@
 	text-align: left;
 }
 
-
 #formDiv {
-margin-top :-40px;
-
-padding : 40px;
+	margin-top: -40px;
+	padding: 40px;
 }
 </style>
 </head>
@@ -51,9 +47,9 @@ padding : 40px;
 
 
 			<form class="form-signin" action="login.do" method="post" name="frm">
-				
-				<h2 class="h3 mb-3 font-weight-normal">KEUMBANG 회원이신가요? </h2>
-			    <hr>
+
+				<h2 class="h3 mb-3 font-weight-normal">KEUMBANG 회원이신가요?</h2>
+				<hr>
 				<div id="msgDiv" class="text-danger">${msg }</div>
 				<label for="exampleInputEmail1">Email address</label> <input
 					type="email" class="form-control" id="inputEmail"
@@ -67,11 +63,13 @@ padding : 40px;
 						Remember me
 					</label>
 				</div>
-				<div id="naverIdLogin"></div></br>
+				<div id="naverIdLogin"></div>
+				</br> <a id="kakao-login-btn"></a> <a
+					href="http://developers.kakao.com/logout"></a></br></br>
 				<button class="btn btn-lg btn-primary btn-block" type="submit"
 					id="loginBtn">로그인</button>
 				<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-				
+
 			</form>
 
 
@@ -84,7 +82,7 @@ padding : 40px;
 
 	<!--/.wrapper-->
 	<jsp:include page="footer.jsp"></jsp:include>
-	
+
 
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -96,7 +94,39 @@ padding : 40px;
 	<script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
 	<script src="scripts/datatables/jquery.dataTables.js"
 		type="text/javascript"></script>
-	<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+	<script type="text/javascript"
+		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+		charset="utf-8"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<script type='text/javascript'>
+		//<![CDATA[
+		// 사용할 앱의 JavaScript 키를 설정해 주세요.
+		Kakao.init('4a1b09291960587e98224d92f79026b1');
+		// 카카오 로그인 버튼을 생성합니다.
+		Kakao.Auth.createLoginButton({
+			container : '#kakao-login-btn',
+			success : function(authObj) {
+				var access_token = 'Authorizstion= Bearer '+authObj.access_token;
+				var refresh_token ='refresh_token='+authObj.refresh_token;
+				Kakao.API.request({
+					url : '/v2/user/me',
+					success :function(resultObj){
+						var email = resultObj.kakao_account.email
+					   var userName =resultObj.properties.nickname
+						var userId =resultObj.id
+						window.location.replace("http://localhost:8080/Keumbang.com/loginKakao.do?userId="+userId+"&email="+email+"&userName="+userName)
+					},fail :function(errorObj){
+						alert("다시 한번 시도해 주세요.")
+					}
+				})
+					
+			},
+			fail : function(err) {
+				alert(JSON.stringify(err));
+			}
+		});
+		//]]>
+	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
