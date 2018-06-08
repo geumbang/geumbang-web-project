@@ -23,7 +23,7 @@
 		var naverLogin = new naver.LoginWithNaverId(
 			{
 				clientId: "nVEqlZN8RaXPEqCIczNM",
-				callbackUrl: "http://localhost:8080/GeumBang/callback.do",
+				callbackUrl: "http://localhost:8080/Keumbang.com/callback.do",
 				isPopup: true,
 				callbackHandle: true
 				/* callback 페이지가 분리되었을 경우에 callback 페이지에서는 callback처리를 해줄수 있도록 설정합니다. */
@@ -47,7 +47,7 @@
 					}
 					var userName =naverLogin.user.getEmail();
 					var userId =naverLogin.user.getId();
-					window.location.replace("http://localhost:8080/GeumBang/loginNaver.do?userId="+userId+"&email="+email+"&userName="+userName)
+					window.location.replace("http://localhost:8080/Keumbang.com/loginNaver.do?userId="+userId+"&email="+email+"&userName="+userName)
 				} else {
 					console.log("callback 처리에 실패하였습니다.");
 				}
