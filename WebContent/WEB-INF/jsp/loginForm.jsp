@@ -114,7 +114,7 @@
 						var email = resultObj.kakao_account.email
 					   var userName =resultObj.properties.nickname
 						var userId =resultObj.id
-						window.location.replace("http://localhost:8080/Keumbang.com/loginKakao.do?userId="+userId+"&email="+email+"&userName="+userName)
+						window.location.replace("loginKakao.do?userId="+userId+"&email="+email+"&userName="+userName)
 					},fail :function(errorObj){
 						alert("다시 한번 시도해 주세요.")
 					}
@@ -159,7 +159,7 @@
 	<script type="text/javascript">
 		var naverLogin = new naver.LoginWithNaverId({
 			clientId : "nVEqlZN8RaXPEqCIczNM",
-			callbackUrl : "http://localhost:8080/Keumbang.com/callback.do",
+			callbackUrl : "callback.do",
 			isPopup : false, /* 팝업을 통한 연동처리 여부 */
 			loginButton : {
 				color : "green",
