@@ -78,8 +78,8 @@ public class MemberController {
 		if (user == null) { // 존재하지않는 회원
 			cService.joinClient(client);
 		}
-
-		session.setAttribute("loginUser", user);
+       Client loginUser = cService.clientCheckByOauth(client);
+		session.setAttribute("loginUser", loginUser);
 		
 		return "redirect:main.do";
 
