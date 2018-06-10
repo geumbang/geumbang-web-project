@@ -31,9 +31,17 @@
 		select * from client where userEmail like #{userEmail}
 	</select>
 	
+	
+	
+	<select id="clientCheckByOauth" parameterType="java.util.HashMap" resultType="client">
+	    select * from client where userEmail like #{userEmail} and oauthType = #{oauthType} 
+	</select>
+	
+
+	
 
 	<select id="getClientInfo" parameterType="Integer" resultType="client">
-		select * from client where userID = #{userID}
+		select * from client where userID = #{userID} 
 	</select>
 	
 	
@@ -51,5 +59,6 @@
 		UPDATE client SET userPWD=#{userPwd} WHERE userID like #{userId}	
 	</update>
 </mapper>
+
 
 

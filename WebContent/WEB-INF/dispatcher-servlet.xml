@@ -33,6 +33,7 @@
 			<mvc:exclude-mapping path="/loginKakao.do" />
 			<mvc:exclude-mapping path="/callbackKakao.do" />
 			<mvc:exclude-mapping path="/myPage.do"/>
+			<mvc:exclude-mapping path="/loginByOauth.do"/>
 			
 		
 			<ref bean="loginCheckInterceptor" />

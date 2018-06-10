@@ -16,6 +16,9 @@ public interface IClientDao {
 	
 	public Client clientCheck(String userEmail);
 	
+	public Client clientCheckByOauth(HashMap<String, Object> params);
+	
+	
 //	public HashMap<String, Object> getClientInfo(int userID);
 	
 	public Client updateClientInfo(HashMap<String, Object> updatedClient);

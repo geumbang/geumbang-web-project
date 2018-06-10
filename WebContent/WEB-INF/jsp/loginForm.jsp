@@ -111,10 +111,11 @@
 				Kakao.API.request({
 					url : '/v2/user/me',
 					success :function(resultObj){
-						var email = resultObj.kakao_account.email
-					   var userName =resultObj.properties.nickname
-						var userId =resultObj.id
-						window.location.replace("loginKakao.do?userId="+userId+"&email="+email+"&userName="+userName)
+						var userEmail = resultObj.kakao_account.email;
+					    var userName =resultObj.properties.nickname;
+						var oauthType = 1;
+						window.location.href = 'loginByOauth.do?userEmail=' + userEmail + '&userName=' +
+						userName+ '&oauthType=' + oauthType ;
 					},fail :function(errorObj){
 						alert("다시 한번 시도해 주세요.")
 					}
@@ -125,6 +126,27 @@
 				alert(JSON.stringify(err));
 			}
 		});
+		
+		
+		
+
+		function post_to_url(path, params, method) {
+			method = method || "post"; // Set method to post by default, if not specified.
+			// The rest of this code assumes you are not using a library.
+			// It can be made less wordy if you use one.
+			var form = document.createElement("form");
+			form.setAttribute("method", method);
+			form.setAttribute("action", path);
+			for ( var key in params) {
+				var hiddenField = document.createElement("input");
+				hiddenField.setAttribute("type", "hidden");
+				hiddenField.setAttribute("name", key);
+				hiddenField.setAttribute("value", params[key]);
+				form.appendChild(hiddenField);
+			}
+			document.body.appendChild(form);
+			form.submit();
+		}
 		//]]>
 	</script>
 	<script type="text/javascript">

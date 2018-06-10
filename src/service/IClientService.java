@@ -15,7 +15,9 @@ public interface IClientService {
 	
 	public int clientCheck(Client client);
 	
-
+	public Client clientCheckByOauth(Client client);
+	
+   
 	
 	public List<Client> selectAllClient();
 	public void updateClient(HashMap<String, Object> updatedClient);
