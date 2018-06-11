@@ -151,7 +151,7 @@
 						<div class="lh-100">
 							<h2 class="mb-0 lh-100">
 								금 국제시세 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;
@@ -172,14 +172,15 @@
 							</h2>
 
 						</div>
+					</div>
+					<div class="module-body">
+						<div class="chart inline-legend grid">
+							<div id="placeholder2" style="height: 300px; width: 100%;"></div>
+						</div>
+					</div>
+				</div>
 
-					</div>
-				</div>
-				<div class="module-body">
-					<div class="chart inline-legend grid">
-						<div id="placeholder2" style="height: 300px; width: 100%;"></div>
-					</div>
-				</div>
+
 			</div>
 
 
@@ -206,46 +207,49 @@
 
 		<div class="hideDiv"></div>
 
-	</div>
 
-	<!--/.wrapper-->
 
-	<jsp:include page="footer.jsp"></jsp:include>
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-	<script src="scripts/jquery-ui-1.10.1.custom.min.js"
-		type="text/javascript"></script>
+		<!--/.wrapper-->
 
-	<script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
-	<script src="scripts/moment.js" type="text/javascript"></script>
-	<script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-	<script src="scripts/datatables/jquery.dataTables.js"
-		type="text/javascript"></script>
-	<script src="scripts/mainchart.js" type="text/javascript"></script>
-	<script type="text/javascript"
-		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
-		charset="utf-8"></script>
-	<script>
-		$(function() {
-			$('a[href*="#"]:not([href="#"])')
-					.click(
-							function() {
-								if (location.pathname.replace(/^\//, '') == this.pathname
-										.replace(/^\//, '')
-										&& location.hostname == this.hostname) {
-									var target = $(this.hash);
-									target = target.length ? target
-											: $('[name=' + this.hash.slice(1)
-													+ ']');
-									if (target.length) {
-										$('html, body').animate({
-											scrollTop : target.offset().top
-										}, 1000);
-										return false;
+		<jsp:include page="footer.jsp"></jsp:include>
+
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="scripts/jquery-ui-1.10.1.custom.min.js"
+			type="text/javascript"></script>
+
+		<script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+		<script src="scripts/moment.js" type="text/javascript"></script>
+		<script src="scripts/flot/jquery.flot.resize.js"
+			type="text/javascript"></script>
+		<script src="scripts/datatables/jquery.dataTables.js"
+			type="text/javascript"></script>
+		<script src="scripts/mainchart.js" type="text/javascript"></script>
+		<script type="text/javascript"
+			src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+			charset="utf-8"></script>
+		<script>
+			$(function() {
+				$('a[href*="#"]:not([href="#"])')
+						.click(
+								function() {
+									if (location.pathname.replace(/^\//, '') == this.pathname
+											.replace(/^\//, '')
+											&& location.hostname == this.hostname) {
+										var target = $(this.hash);
+										target = target.length ? target
+												: $('[name='
+														+ this.hash.slice(1)
+														+ ']');
+										if (target.length) {
+											$('html, body').animate({
+												scrollTop : target.offset().top
+											}, 1000);
+											return false;
+										}
 									}
-								}
-							});
-		});
-	</script>
+								});
+			});
+		</script>
 </body>
 </html>
