@@ -45,11 +45,25 @@
 }
 
 #realValDiv {
-	margin-top:10px;
+	margin-top: 10px;
 }
 
 .span4 {
 	padding: 3px;
+}
+
+.priceDiv {
+	height: 150px;
+}
+
+.wonSpan {
+	font-size: 20px;
+	font-weight: 480;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 500;
 }
 </style>
 </head>
@@ -81,40 +95,45 @@
 							</small>
 						</div>
 					</div>
-   					
+
 					<div class="btn-controls" id="realValDiv">
 
 						<div class="btn-box-row row-fluid ">
-							<div class="btn-box big span4 bg-light rounded">
-								<span> </br>&nbsp;금(24K) <span class="gray">/3.75g </span>
-									<hr class="border-secondary">
-									<p class="text-muted">${goldPriceResult[0]}
-										<span class="gray">원 (전일대비 ${goldPriceResult[6]}원)</br>
-											&nbsp;
-										</span>
-									</p>
-								</span>
+							<div class="btn-box big span4 bg-light rounded priceDiv">
+								<br> <span class="title">&nbsp;금(24K) /3.75g </span>
+								<hr class="border-secondary">
+								<p>
+									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[0]}
+										원</span> &nbsp;(전일대비 ${goldPriceResult[6]}원)
+								</p>
 							</div>
-							<div class="btn-box big span4 bg-light rounded">
-								<span class="side"> </br>&nbsp;금(18K) <span class="gray">/3.75g</span>
-									<hr class="border-secondary">
-									<p class="text-muted">${goldPriceResult[2]}
-										<span class="gray">원 (전일대비 ${goldPriceResult[8]}원)</br>
-											&nbsp;
-										</span>
-									</p>
-								</span>
+
+
+
+							<div class="btn-box big span4 bg-light rounded priceDiv">
+								<br> <span class="title">&nbsp;금(18K) /3.75g </span>
+								<hr class="border-secondary">
+								<p>
+									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[2]}
+										원</span> &nbsp;(전일대비 ${goldPriceResult[8]}원)
+								</p>
 							</div>
-							<div class="btn-box big span4 bg-light rounded">
-								<span class="side"> </br>&nbsp;금(14K) <span class="gray">/3.75g</span>
-									<hr class="border-secondary">
-									<p class="text-muted">${goldPriceResult[4]}
-										<span class="gray">원 (전일대비 ${goldPriceResult[10]}원)</br>
-											&nbsp;
-										</span>
-									</p>
-								</span>
+
+
+
+							<div class="btn-box big span4 bg-light rounded priceDiv">
+								<br> <span class="title">&nbsp;금(14K) /3.75g </span>
+								<hr class="border-secondary">
+
+								<p>
+									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[4]}
+										원</span> &nbsp;(전일대비 ${goldPriceResult[10]}원)
+								</p>
+
+
 							</div>
+
+
 						</div>
 
 					</div>
@@ -130,16 +149,27 @@
 						class="d-flex align-items-center p-2 my-3 bg-warning rounded box-shadow">
 
 						<div class="lh-100">
-							<h2 class="mb-0 lh-100">금 국제시세 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-							<div class="btn-group" role="group" aria-label="method">
-							<button type="button" class="select btn btn-light btn-warning btn-sm inBtn" id="1989">1989년 이후</button><button
-								type="button"
-								class="select btn btn-light btn-warning btn-sm inBtn" id="10years">최근 10년</button>
-								<button type="button"
-								class="select btn btn-light btn-warning btn-sm inBtn" id="1year">최근 1년</button><button
-								type="button"
-								class="select btn btn-light btn-warning btn-sm inBtn" id="week">최근 1달</button></div>
-							</h2> 
+							<h2 class="mb-0 lh-100">
+								금 국제시세 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;
+								<div class="btn-group" role="group" aria-label="method">
+									<button type="button"
+										class="select btn btn-light btn-warning btn-sm inBtn"
+										id="1989">1989년 이후</button>
+									<button type="button"
+										class="select btn btn-light btn-warning btn-sm inBtn"
+										id="10years">최근 10년</button>
+									<button type="button"
+										class="select btn btn-light btn-warning btn-sm inBtn"
+										id="1year">최근 1년</button>
+									<button type="button"
+										class="select btn btn-light btn-warning btn-sm inBtn"
+										id="week">최근 1달</button>
+								</div>
+							</h2>
 
 						</div>
 
@@ -192,7 +222,9 @@
 	<script src="scripts/datatables/jquery.dataTables.js"
 		type="text/javascript"></script>
 	<script src="scripts/mainchart.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+	<script type="text/javascript"
+		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+		charset="utf-8"></script>
 	<script>
 		$(function() {
 			$('a[href*="#"]:not([href="#"])')
