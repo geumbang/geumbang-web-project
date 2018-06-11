@@ -102,6 +102,7 @@
 		//<![CDATA[
 		// 사용할 앱의 JavaScript 키를 설정해 주세요.
 		Kakao.init('4a1b09291960587e98224d92f79026b1');
+		/* Kakao.init('dec9c2dee81b74777a22da363001f959'); */
 		// 카카오 로그인 버튼을 생성합니다.
 		Kakao.Auth.createLoginButton({
 			container : '#kakao-login-btn',
@@ -181,7 +182,9 @@
 	<script type="text/javascript">
 		var naverLogin = new naver.LoginWithNaverId({
 			clientId : "nVEqlZN8RaXPEqCIczNM",
-			callbackUrl : "http://localhost:8080/Keumbang.com/callback.do",
+			/* clientId : "vvbcBNIC95H4G9teZLCm", */
+			callbackUrl: "http://localhost:8080/Keumbang.com/callback.do",
+			/* callbackUrl: "http://49.247.205.60:8080/Keumbang.com/callback.do", */
 			isPopup : false, /* 팝업을 통한 연동처리 여부 */
 			loginButton : {
 				color : "green",

@@ -20,7 +20,9 @@
 		var naverLogin = new naver.LoginWithNaverId(
 			{
 				clientId: "nVEqlZN8RaXPEqCIczNM",
+				/* clientId : "vvbcBNIC95H4G9teZLCm", */
 				callbackUrl: "http://localhost:8080/Keumbang.com/callback.do",
+				/* callbackUrl: "http://49.247.205.60:8080/Keumbang.com/callback.do", */
 				isPopup: true,
 				callbackHandle: true
 				/* callback 페이지가 분리되었을 경우에 callback 페이지에서는 callback처리를 해줄수 있도록 설정합니다. */
