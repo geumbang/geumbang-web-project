@@ -9,6 +9,7 @@
 <body>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
+Kakao.init('4a1b09291960587e98224d92f79026b1');
 Kakao.Auth.logout();
 window.location.href = 'logoutKakaoSession.do';
 </script>
