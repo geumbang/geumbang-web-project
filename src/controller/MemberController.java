@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.Admin;
 import model.Client;
-import model.EtcClient;
 import model.Retail;
 import service.IAdminService;
 import service.IClientService;
@@ -32,33 +31,6 @@ public class MemberController {
 	@Autowired
 	private IRetailService rService;
 
-	@RequestMapping("loginKakao.do")
-	public String loginKakao(HttpSession session, String userId, String email, String userName) {
-
-		EtcClient client = new EtcClient();
-		client.setUserId(userId);
-		client.setUserEmail(email);
-		client.setUserName(userName);
-
-		session.setAttribute("loginUser", client);
-		return "redirect:main.do";
-
-	}
-
-	@RequestMapping("loginNaver.do")
-	public String loginNaver(HttpSession session, String userId, String email, String userName) {
-
-		System.out.println(userName);
-
-		EtcClient client = new EtcClient();
-		client.setUserId(userId);
-		client.setUserEmail(email);
-		client.setUserName(userName);
-
-		session.setAttribute("loginUser", client);
-		return "redirect:main.do";
-
-	}
 
 	@RequestMapping("callback.do")
 	public String callback() {
@@ -85,6 +57,8 @@ public class MemberController {
 
 	}
 
+	
+	
 	@RequestMapping(value = "isExistMember.do", produces = { "application/json" })
 	public @ResponseBody int isExistMember(String email) {
 
@@ -152,9 +126,27 @@ public class MemberController {
 
 	@RequestMapping("logout.do")
 	public String logout(HttpSession session) {
-
+	
+		Client loginUser = (Client) session.getAttribute("loginUser");
+     
+		if(loginUser.getOauthType() == 1 ) //카카오 계정이면 
+		{
+			return "redirect:logoutKakao.do";
+		}
+		
 		session.invalidate();
-
+		return "redirect:main.do";
+	}
+	
+	
+	@RequestMapping("logoutKakao.do")
+	public String kakaoLogout() {
+		return "logoutKakao";
+	}
+	
+	@RequestMapping("logoutKakaoSession.do")
+	public String kakaoLogouSessiont(HttpSession session) {
+		session.invalidate();
 		return "redirect:main.do";
 	}
 

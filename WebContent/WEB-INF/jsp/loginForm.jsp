@@ -181,7 +181,7 @@
 	<script type="text/javascript">
 		var naverLogin = new naver.LoginWithNaverId({
 			clientId : "nVEqlZN8RaXPEqCIczNM",
-			callbackUrl : "callback.do",
+			callbackUrl : "http://localhost:8080/Keumbang.com/callback.do",
 			isPopup : false, /* 팝업을 통한 연동처리 여부 */
 			loginButton : {
 				color : "green",
