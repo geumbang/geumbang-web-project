@@ -48,8 +48,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 180000,
-						minimum : 160000
+						maximum : 175000,
+						minimum : 165000
 					},
 					toolTip : {
 						shared : true
@@ -411,8 +411,8 @@ $('.select').click(function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 180000,
-						minimum : 160000
+						maximum : 175000,
+						minimum : 165000
 					},
 					toolTip : {
 						shared : true
@@ -496,8 +496,8 @@ $('.select').click(function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 180000,
-						minimum : 160000
+						maximum : 175000,
+						minimum : 165000
 					},
 					toolTip : {
 						shared : true
