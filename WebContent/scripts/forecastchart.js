@@ -149,7 +149,7 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 190000,
+						maximum : 175000,
 						minimum : 160000
 					},
 					toolTip : {

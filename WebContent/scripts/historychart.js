@@ -214,8 +214,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 190000,
-						minimum : 160000
+						maximum : 172000,
+						minimum : 164000
 					},
 					toolTip : {
 						shared : true
@@ -474,8 +474,8 @@ $('.daily-forecast').click(function() {
 					crosshair : {
 						enabled : true
 					},
-					maximum : 190000,
-					minimum : 160000
+					maximum : 172000,
+					minimum : 164000
 				},
 				toolTip : {
 					shared : true
