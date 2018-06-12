@@ -184,7 +184,7 @@
 			clientId : "nVEqlZN8RaXPEqCIczNM",
 			/* clientId : "vvbcBNIC95H4G9teZLCm", */
 			callbackUrl: "http://localhost:8080/Keumbang.com/callback.do",
-			/* callbackUrl: "http://49.247.205.60:8080/Keumbang/callback.do", */
+			/* callbackUrl: "http://keumbang.com/Keumbang/callback.do", */
 			isPopup : false, /* 팝업을 통한 연동처리 여부 */
 			loginButton : {
 				color : "green",
