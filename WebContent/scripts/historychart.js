@@ -11,6 +11,9 @@ window.onload = function() {
 				var exRate = data.exrate;
 				
 				var price = new Array();
+				
+				var gold_price_max = 0;
+				var gold_price_min = 1000000;
 				for (var i = 0; i < data.size; i++) {
 					
 					// 객체 생성					
@@ -29,6 +32,12 @@ window.onload = function() {
 					price_data.y = Math.floor(gold_price, 2)
 					// 리스트에 생성된 객체 삽입
 					price.push(price_data);
+					
+					if(gold_price>=gold_price_max)
+						gold_price_max=gold_price
+						
+					if(gold_price<=gold_price_min)
+						gold_price_min=gold_price
 				}
 				
 				var forecast = new Array();
@@ -49,6 +58,12 @@ window.onload = function() {
 					forecast_data.y = Math.floor(gold_forecast, 2)
 					// 리스트에 생성된 객체 삽입
 					forecast.push(forecast_data);
+					
+					if(gold_price>=gold_price_max)
+						gold_price_max=gold_price
+						
+					if(gold_price<=gold_price_min)
+						gold_price_min=gold_price
 				}
 				
 				var chart2 = new CanvasJS.Chart("hhh2", {
@@ -65,7 +80,9 @@ window.onload = function() {
 						title : "Gold Price",
 						crosshair : {
 							enabled : true
-						}
+						},
+						maximum : gold_price_max,
+						minimum : gold_price_min
 					},
 					toolTip : {
 						shared : true
@@ -114,6 +131,9 @@ window.onload = function() {
 				
 				
 				var forecastOur_d = new Array();
+				
+				var gold_price_d_max = 0;
+				var gold_price_d_min = 1000000;
 				for (var i = 0; i < data.size_d; i++) {
 					
 					// 객체 생성					
@@ -133,9 +153,18 @@ window.onload = function() {
 					our_d_data.y = Math.floor(ourGold_d, 2)
 					// 리스트에 생성된 객체 삽입
 					forecastOur_d.push(our_d_data);
+					
+					if(ourGold_d>=gold_price_d_max)
+						gold_price_d_max=ourGold_d
+						
+					if(ourGold_d<=gold_price_d_min)
+						gold_price_d_min=ourGold_d
 				}
 				
 				var forecastOur_m = new Array();
+				
+				var gold_price_m_max = 0;
+				var gold_price_m_min = 1000000;
 				for (var i = 0; i < 10; i++) {
 					
 					// 객체 생성					
@@ -155,6 +184,12 @@ window.onload = function() {
 					our_m_data.y = Math.floor(ourGold_m, 2)
 					// 리스트에 생성된 객체 삽입
 					forecastOur_m.push(our_m_data);
+					
+					if(ourGold_m>=gold_price_m_max)
+						gold_price_m_max=ourGold_m
+						
+					if(ourGold_m<=gold_price_m_min)
+						gold_price_m_min=ourGold_m
 				}
 				
 				var todaySite_1 = new Array();
@@ -185,15 +220,33 @@ window.onload = function() {
 					site1_data.y = Math.floor(priceToday, 2)
 					todaySite_1.push(site1_data);
 					
+					if(priceToday>=gold_price_m_max)
+						gold_price_m_max=priceToday
+						
+					if(priceToday<=gold_price_m_min)
+						gold_price_m_min=priceToday
+					
 					} else if (checkToday == 2) {
 						site2_data.x = new Date(year, month, day);
 						site2_data.y = Math.floor(priceToday, 2)
 						todaySite_2.push(site2_data);
 						
+						if(priceToday>=gold_price_d_max)
+							gold_price_d_max=priceToday
+							
+						if(priceToday<=gold_price_d_min)
+							gold_price_d_min=priceToday
+						
 					} else if (checkToday == 3) {
 						site3_data.x = new Date(year, month, day);
 						site3_data.y = Math.floor(priceToday, 2)
 						todaySite_3.push(site3_data);
+						
+						if(priceToday>=gold_price_m_max)
+							gold_price_m_max=priceToday
+							
+						if(priceToday<=gold_price_m_min)
+							gold_price_m_min=priceToday
 						
 					}
 					// 리스트에 생성된 객체 삽입
@@ -214,8 +267,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 172000,
-						minimum : 164000
+						maximum : gold_price_d_max,
+						minimum : gold_price_d_min
 					},
 					toolTip : {
 						shared : true
@@ -271,6 +324,9 @@ $('.daily-forecast').click(function() {
 			var exRate = data.exrate;
 			
 			var price = new Array();
+			
+			var gold_price_max = 0;
+			var gold_price_min = 1000000;
 			for (var i = 0; i < data.size; i++) {
 				
 				// 객체 생성					
@@ -289,6 +345,12 @@ $('.daily-forecast').click(function() {
 				price_data.y = Math.floor(gold_price, 2)
 				// 리스트에 생성된 객체 삽입
 				price.push(price_data);
+				
+				if(gold_price>=gold_price_max)
+					gold_price_max=gold_price
+					
+				if(gold_price<=gold_price_min)
+					gold_price_min=gold_price
 			}
 			
 			var forecast = new Array();
@@ -309,6 +371,12 @@ $('.daily-forecast').click(function() {
 				forecast_data.y = Math.floor(gold_forecast, 2)
 				// 리스트에 생성된 객체 삽입
 				forecast.push(forecast_data);
+				
+				if(gold_price>=gold_price_max)
+					gold_price_max=gold_price
+					
+				if(gold_price<=gold_price_min)
+					gold_price_min=gold_price
 			}
 			
 			var chart2 = new CanvasJS.Chart("hhh2", {
@@ -325,7 +393,9 @@ $('.daily-forecast').click(function() {
 					title : "Gold Price",
 					crosshair : {
 						enabled : true
-					}
+					},
+					maximum : gold_price_max,
+					minimum : gold_price_min
 				},
 				toolTip : {
 					shared : true
@@ -374,6 +444,9 @@ $('.daily-forecast').click(function() {
 			
 			
 			var forecastOur_d = new Array();
+			
+			var gold_price_d_max = 0;
+			var gold_price_d_min = 1000000;
 			for (var i = 0; i < data.size_d; i++) {
 				
 				// 객체 생성					
@@ -393,9 +466,18 @@ $('.daily-forecast').click(function() {
 				our_d_data.y = Math.floor(ourGold_d, 2)
 				// 리스트에 생성된 객체 삽입
 				forecastOur_d.push(our_d_data);
+				
+				if(ourGold_d>=gold_price_d_max)
+					gold_price_d_max=ourGold_d
+					
+				if(ourGold_d<=gold_price_d_min)
+					gold_price_d_min=ourGold_d
 			}
 			
 			var forecastOur_m = new Array();
+			
+			var gold_price_m_max = 0;
+			var gold_price_m_min = 1000000;
 			for (var i = 0; i < 10; i++) {
 				
 				// 객체 생성					
@@ -415,6 +497,12 @@ $('.daily-forecast').click(function() {
 				our_m_data.y = Math.floor(ourGold_m, 2)
 				// 리스트에 생성된 객체 삽입
 				forecastOur_m.push(our_m_data);
+				
+				if(ourGold_m>=gold_price_m_max)
+					gold_price_m_max=ourGold_m
+					
+				if(ourGold_m<=gold_price_m_min)
+					gold_price_m_min=ourGold_m
 			}
 			
 			var todaySite_1 = new Array();
@@ -445,15 +533,33 @@ $('.daily-forecast').click(function() {
 				site1_data.y = Math.floor(priceToday, 2)
 				todaySite_1.push(site1_data);
 				
+				if(priceToday>=gold_price_m_max)
+					gold_price_m_max=priceToday
+					
+				if(priceToday<=gold_price_m_min)
+					gold_price_m_min=priceToday
+				
 				} else if (checkToday == 2) {
 					site2_data.x = new Date(year, month, day);
 					site2_data.y = Math.floor(priceToday, 2)
 					todaySite_2.push(site2_data);
 					
+					if(priceToday>=gold_price_d_max)
+						gold_price_d_max=priceToday
+						
+					if(priceToday<=gold_price_d_min)
+						gold_price_d_min=priceToday
+					
 				} else if (checkToday == 3) {
 					site3_data.x = new Date(year, month, day);
 					site3_data.y = Math.floor(priceToday, 2)
 					todaySite_3.push(site3_data);
+					
+					if(priceToday>=gold_price_m_max)
+						gold_price_m_max=priceToday
+						
+					if(priceToday<=gold_price_m_min)
+						gold_price_m_min=priceToday
 					
 				}
 				// 리스트에 생성된 객체 삽입
@@ -474,8 +580,8 @@ $('.daily-forecast').click(function() {
 					crosshair : {
 						enabled : true
 					},
-					maximum : 172000,
-					minimum : 164000
+					maximum : gold_price_d_max,
+					minimum : gold_price_d_min
 				},
 				toolTip : {
 					shared : true
@@ -490,7 +596,7 @@ $('.daily-forecast').click(function() {
 				data : [ {
 					type : "line",
 					showInLegend : true,
-					name : "keumbang.com 일별 금값",
+					name : "keumbang.com 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#05B088",
@@ -498,7 +604,7 @@ $('.daily-forecast').click(function() {
 				},{
 					type : "line",
 					showInLegend : true,
-					name : "The Enonomy Forecast Agency",
+					name : "The Economy Forecast Agency 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#F08080",
@@ -531,6 +637,9 @@ $('.monthly-forecast').click(function() {
 			var exRate = data.exrate;
 			
 			var price = new Array();
+			
+			var gold_price_max = 0;
+			var gold_price_min = 1000000;
 			for (var i = 0; i < data.size; i++) {
 				
 				// 객체 생성					
@@ -549,6 +658,12 @@ $('.monthly-forecast').click(function() {
 				price_data.y = Math.floor(gold_price, 2)
 				// 리스트에 생성된 객체 삽입
 				price.push(price_data);
+				
+				if(gold_price>=gold_price_max)
+					gold_price_max=gold_price
+					
+				if(gold_price<=gold_price_min)
+					gold_price_min=gold_price
 			}
 			
 			var forecast = new Array();
@@ -569,6 +684,12 @@ $('.monthly-forecast').click(function() {
 				forecast_data.y = Math.floor(gold_forecast, 2)
 				// 리스트에 생성된 객체 삽입
 				forecast.push(forecast_data);
+				
+				if(gold_price>=gold_price_max)
+					gold_price_max=gold_price
+					
+				if(gold_price<=gold_price_min)
+					gold_price_min=gold_price
 			}
 			
 			var chart2 = new CanvasJS.Chart("hhh2", {
@@ -585,7 +706,9 @@ $('.monthly-forecast').click(function() {
 					title : "Gold Price",
 					crosshair : {
 						enabled : true
-					}
+					},
+					maximum : gold_price_max,
+					minimum : gold_price_min
 				},
 				toolTip : {
 					shared : true
@@ -608,7 +731,7 @@ $('.monthly-forecast').click(function() {
 				},{
 					type : "line",
 					showInLegend : true,
-					name : "keumbang.com 일별 금값",
+					name : "keumbang.com 금값",
 					markerType : "square",
 					xValueFormatString : "DD MMM, YYYY",
 					color : "#F08080",
@@ -634,6 +757,9 @@ $('.monthly-forecast').click(function() {
 			
 			
 			var forecastOur_d = new Array();
+			
+			var gold_price_d_max = 0;
+			var gold_price_d_min = 1000000;
 			for (var i = 0; i < data.size_d; i++) {
 				
 				// 객체 생성					
@@ -653,9 +779,18 @@ $('.monthly-forecast').click(function() {
 				our_d_data.y = Math.floor(ourGold_d, 2)
 				// 리스트에 생성된 객체 삽입
 				forecastOur_d.push(our_d_data);
+				
+				if(ourGold_d>=gold_price_d_max)
+					gold_price_d_max=ourGold_d
+					
+				if(ourGold_d<=gold_price_d_min)
+					gold_price_d_min=ourGold_d
 			}
 			
 			var forecastOur_m = new Array();
+			
+			var gold_price_m_max = 0;
+			var gold_price_m_min = 1000000;
 			for (var i = 0; i < 10; i++) {
 				
 				// 객체 생성					
@@ -675,6 +810,12 @@ $('.monthly-forecast').click(function() {
 				our_m_data.y = Math.floor(ourGold_m, 2)
 				// 리스트에 생성된 객체 삽입
 				forecastOur_m.push(our_m_data);
+				
+				if(ourGold_m>=gold_price_m_max)
+					gold_price_m_max=ourGold_m
+					
+				if(ourGold_m<=gold_price_m_min)
+					gold_price_m_min=ourGold_m
 			}
 			
 			var todaySite_1 = new Array();
@@ -705,15 +846,33 @@ $('.monthly-forecast').click(function() {
 				site1_data.y = Math.floor(priceToday, 2)
 				todaySite_1.push(site1_data);
 				
+				if(priceToday>=gold_price_m_max)
+					gold_price_m_max=priceToday
+					
+				if(priceToday<=gold_price_m_min)
+					gold_price_m_min=priceToday
+				
 				} else if (checkToday == 2) {
 					site2_data.x = new Date(year, month, day);
 					site2_data.y = Math.floor(priceToday, 2)
 					todaySite_2.push(site2_data);
 					
+					if(priceToday>=gold_price_d_max)
+						gold_price_d_max=priceToday
+						
+					if(priceToday<=gold_price_d_min)
+						gold_price_d_min=priceToday
+					
 				} else if (checkToday == 3) {
 					site3_data.x = new Date(year, month, day);
 					site3_data.y = Math.floor(priceToday, 2)
 					todaySite_3.push(site3_data);
+					
+					if(priceToday>=gold_price_m_max)
+						gold_price_m_max=priceToday
+						
+					if(priceToday<=gold_price_m_min)
+						gold_price_m_min=priceToday
 					
 				}
 				// 리스트에 생성된 객체 삽입
@@ -734,8 +893,8 @@ $('.monthly-forecast').click(function() {
 					crosshair : {
 						enabled : true
 					},
-					maximum : 190000,
-					minimum : 140000
+					maximum : gold_price_m_max,
+					minimum : gold_price_m_min
 				},
 				toolTip : {
 					shared : true
@@ -785,6 +944,7 @@ $('.monthly-forecast').click(function() {
 				comparison_chart.render();
 			}
 		}
+	
 	})
 
 })

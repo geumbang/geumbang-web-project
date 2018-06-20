@@ -43,6 +43,9 @@ window.onload = function() {
 				/* 월별 예측 금 값  */
 				var exRate = data.exrate;
 				var daily = new Array();
+				
+				var gold_price_d_max = 0;
+				var gold_price_d_min = 1000000;
 				for (var i = 0; i < data.size_d; i++) {
 					// 객체 생성
 					var dataD = new Object();
@@ -62,9 +65,18 @@ window.onload = function() {
 					dataD.y = Math.floor(gold_price, 2)
 					// 리스트에 생성된 객체 삽입
 					daily.push(dataD);
+					
+					if(gold_price>=gold_price_d_max)
+						gold_price_d_max=gold_price
+						
+					if(gold_price<=gold_price_d_min)
+						gold_price_d_min=gold_price
 				}
 				
 				var monthly = new Array();
+				
+				var gold_price_m_max = 0;
+				var gold_price_m_min = 1000000;
 				for (var i = 0; i < data.size_m; i++) {
 					// 객체 생성
 					var dataM = new Object();
@@ -84,6 +96,12 @@ window.onload = function() {
 					dataM.y = Math.floor(gold_price, 2)
 					// 리스트에 생성된 객체 삽입
 					monthly.push(dataM);
+					
+					if(gold_price>=gold_price_m_max)
+						gold_price_m_max=gold_price
+						
+					if(gold_price<=gold_price_m_min)
+						gold_price_m_min=gold_price
 				}
 				
 				var chart2 = new CanvasJS.Chart("chartContainer2", {
@@ -101,8 +119,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 170000,
-						minimum : 140000
+						maximum : gold_price_m_max,
+						minimum : gold_price_m_min
 					},
 					toolTip : {
 						shared : true
@@ -150,8 +168,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 175000,
-						minimum : 160000
+						maximum : gold_price_d_max,
+						minimum : gold_price_d_min
 					},
 					toolTip : {
 						shared : true

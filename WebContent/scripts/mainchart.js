@@ -12,6 +12,8 @@ window.onload = function() {
 				var exRate = data.exrate;
 				
 				var goldprice_r = new Array();
+				var gold_price_r_max = 0;
+				var gold_price_r_min = 1000000;
 				for (var i = 1944; i < data.size_r; i++) {
 					// 객체 생성					
 					
@@ -31,6 +33,12 @@ window.onload = function() {
 					dataR.y = Math.floor(gold_price_r, 2)
 					// 리스트에 생성된 객체 삽입
 					goldprice_r.push(dataR);
+					
+					if(gold_price_r>=gold_price_r_max)
+					gold_price_r_max=gold_price_r
+					
+					if(gold_price_r<=gold_price_r_min)
+					gold_price_r_min=gold_price_r
 				}
 				
 				var chart2 = new CanvasJS.Chart("placeholder2", {
@@ -48,8 +56,8 @@ window.onload = function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 175000,
-						minimum : 165000
+						maximum : gold_price_r_max,
+						minimum : gold_price_r_min
 					},
 					toolTip : {
 						shared : true
@@ -100,6 +108,9 @@ $('.select').click(function() {
 			var exRate = data.exrate;
 			
 			var goldprice_d = new Array();
+			
+			var gold_price_d_max = 0;
+			var gold_price_d_min = 1000000;
 			for (var i = 0; i < data.size_d; i++) {
 				// 객체 생성					
 				
@@ -120,6 +131,12 @@ $('.select').click(function() {
 				dataD.y = Math.floor(gold_price_d, 2)
 				// 리스트에 생성된 객체 삽입
 				goldprice_d.push(dataD);
+				
+				if(gold_price_d>=gold_price_d_max)
+					gold_price_d_max=gold_price_d
+					
+				if(gold_price_d<=gold_price_d_min)
+					gold_price_d_min=gold_price_d
 			}
 			
 			var chart2 = new CanvasJS.Chart("placeholder2", {
@@ -136,7 +153,9 @@ $('.select').click(function() {
 					title : "Gold Price",
 					crosshair : {
 						enabled : true
-					}
+					},
+					maximum : gold_price_d_max,
+					minimum : gold_price_d_min
 				},
 				toolTip : {
 					shared : true
@@ -182,6 +201,9 @@ $('.select').click(function() {
 				var exRate = data.exrate;
 				
 				var goldprice_d = new Array();
+				
+				var gold_price_d_max = 0;
+				var gold_price_d_min = 1000000;
 				for (var i = 4955; i < data.size_d; i++) {
 					// 객체 생성					
 					
@@ -202,6 +224,12 @@ $('.select').click(function() {
 					dataD.y = Math.floor(gold_price_d, 2)
 					// 리스트에 생성된 객체 삽입
 					goldprice_d.push(dataD);
+					
+					if(gold_price_d>=gold_price_d_max)
+						gold_price_d_max=gold_price_d
+						
+					if(gold_price_d<=gold_price_d_min)
+						gold_price_d_min=gold_price_d
 				}
 				
 				var chart2 = new CanvasJS.Chart("placeholder2", {
@@ -218,7 +246,9 @@ $('.select').click(function() {
 						title : "Gold Price",
 						crosshair : {
 							enabled : true
-						}
+						},
+						maximum : gold_price_d_max,
+						minimum : gold_price_d_min
 					},
 					toolTip : {
 						shared : true
@@ -266,6 +296,9 @@ $('.select').click(function() {
 				var exRate = data.exrate;
 				
 				var goldprice_d = new Array();
+				
+				var gold_price_d_max = 0;
+				var gold_price_d_min = 1000000;
 				for (var i = 7304; i < data.size_d; i++) {
 					// 객체 생성					
 					
@@ -286,9 +319,18 @@ $('.select').click(function() {
 					dataD.y = Math.floor(gold_price_d, 2)
 					// 리스트에 생성된 객체 삽입
 					goldprice_d.push(dataD);
+					
+					if(gold_price_d>=gold_price_d_max)
+						gold_price_d_max=gold_price_d
+						
+					if(gold_price_d<=gold_price_d_min)
+						gold_price_d_min=gold_price_d
 				}
 				
 				var goldprice_r = new Array();
+				
+				var gold_price_r_max = 0;
+				var gold_price_r_min = 1000000;
 				for (var i = 0; i < data.size_r; i++) {
 					// 객체 생성					
 					
@@ -309,6 +351,12 @@ $('.select').click(function() {
 					dataR.y = Math.floor(gold_price_r, 2)
 					// 리스트에 생성된 객체 삽입
 					goldprice_r.push(dataR);
+					
+					if(gold_price_r>=gold_price_r_max)
+						gold_price_r_max=gold_price_r
+						
+					if(gold_price_r<=gold_price_r_min)
+						gold_price_r_min=gold_price_r
 				}
 				
 				var chart2 = new CanvasJS.Chart("placeholder2", {
@@ -326,8 +374,8 @@ $('.select').click(function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 180000,
-						minimum : 140000
+						maximum : gold_price_d_max,
+						minimum : gold_price_d_min
 					},
 					toolTip : {
 						shared : true
@@ -375,6 +423,9 @@ $('.select').click(function() {
 				var exRate = data.exrate;
 				
 				var goldprice_r = new Array();
+				
+				var gold_price_r_max = 0;
+				var gold_price_r_min = 1000000;
 				for (var i = 1944; i < data.size_r; i++) {
 					// 객체 생성					
 					
@@ -394,91 +445,12 @@ $('.select').click(function() {
 					dataR.y = Math.floor(gold_price_r, 2)
 					// 리스트에 생성된 객체 삽입
 					goldprice_r.push(dataR);
-				}
-				
-				var chart2 = new CanvasJS.Chart("placeholder2", {
-					animationEnabled : true,
-					theme : "light2",
-					axisX : {
-						valueFormatString : "DD MMM",
-						crosshair : {
-							enabled : true,
-							snapToDataPoint : true
-						}
-					},
-					axisY : {
-						title : "Gold Price",
-						crosshair : {
-							enabled : true
-						},
-						maximum : 175000,
-						minimum : 165000
-					},
-					toolTip : {
-						shared : true
-					},
-					legend : {
-						cursor : "pointer",
-						verticalAlign : "bottom",
-						horizontalAlign : "left",
-						dockInsidePlotArea : true,
-						itemclick : toogleDataSeries
-					},
-					data : [ {
-						type : "line",
-						showInLegend : true,
-						name : "금값",
-						markerType : "square",
-						xValueFormatString : "DD MMM, YYYY HH:MM",
-						color : "#F08080",
-						dataPoints : goldprice_r
-					}]
-				});
-				chart2.render();
-				
-				function toogleDataSeries(e) {
-					if (typeof (e.dataSeries.visible) === "undefined"
-							|| e.dataSeries.visible) {
-						e.dataSeries.visible = false;
-					} else {
-						e.dataSeries.visible = true;
-					}
-					chart2.render();
-				}
-			}
-		})
-		
-		
-	}if (selectId == "daily-time") {
-		$.ajax({
-			url : 'main_ajax.do',
-			type : 'get',
-			dataType : 'json',
-			success : function(data) {
-				/* 월별 예측 금 값  */
-				
-				var exRate = data.exrate;
-				
-				var goldprice_r = new Array();
-				for (var i = 2189; i < data.size_r; i++) {
-					// 객체 생성					
 					
-					var dataR = new Object();
-					var date = data.goldprice_r[i].date_result;
-					var year = date.substring(0, 4);
-					var month = date.substring(5,7);
-					month *= 1;
-					month=month-1;
-					month = String(month);
-					var day = date.substring(8, 10);
-					var hours =date.substring(11,13);
-					var minutes =date.substring(14,16);
-					dataR.x = new Date(year, month, day, hours, minutes);
-					gold_price_r = data.goldprice_r[i].gold_buy
-					gold_price_r = gold_price_r / 31.1035 * 3.75 * exRate;
-					dataR.y = Math.floor(gold_price_r, 2)
-					// 리스트에 생성된 객체 삽입
-					goldprice_r.push(dataR);
+					if(gold_price_r>=gold_price_r_max)
+						gold_price_r_max=gold_price_r
+						
+					if(gold_price_r<=gold_price_r_min)
+						gold_price_r_min=gold_price_r
 				}
 				
 				var chart2 = new CanvasJS.Chart("placeholder2", {
@@ -496,8 +468,8 @@ $('.select').click(function() {
 						crosshair : {
 							enabled : true
 						},
-						maximum : 175000,
-						minimum : 165000
+						maximum : gold_price_r_max,
+						minimum : gold_price_r_min
 					},
 					toolTip : {
 						shared : true
