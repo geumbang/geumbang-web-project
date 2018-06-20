@@ -29,6 +29,7 @@ window.onload = function() {
 									.split(".")[0]
 									+ "원";
 							var k_month = item.forecastM_date;
+							k_month=moment( k_month).format("YYYY-MM-DD");
 							var tr = $('<tr>');
 							$('<td>').text(index + 1).appendTo(tr);
 							$('<td>').text(k_month).appendTo(tr);
@@ -241,6 +242,7 @@ window.onload = function() {
 																					".")[0]
 																			+ "원";
 																	var k_month = item.forecastD_date;
+																	k_month=moment( k_month).format("YYYY-MM-DD");
 																	var tr = $('<tr>');
 																	$('<td>')
 																			.text(
@@ -321,6 +323,7 @@ window.onload = function() {
 																					".")[0]
 																			+ "원";
 																	var k_month = item.forecastM_date;
+																	k_month=moment( k_month).format("YYYY-MM-DD");
 																	var tr = $('<tr>');
 																	$('<td>')
 																			.text(
