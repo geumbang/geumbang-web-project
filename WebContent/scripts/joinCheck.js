@@ -213,6 +213,7 @@ $(document)
 
 							return false;
 						}
+						$('#inputPassword').val(SHA256($('#inputPassword').val()));
 					}
 
 				});
