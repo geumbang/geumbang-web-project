@@ -57,6 +57,7 @@
 				<br> 
 				<label for="exampleInputPassword1">Password</label> 
 				<input type="password" class="form-control" id="inputPwd" name="userPwd" required>
+				<input type="hidden" class="form-control" id="hiddenPwd">
 				<div class="checkbox mb-3">
 					<label> <input type="checkbox" value="remember-me">Remember me</label>
 				</div>
@@ -149,7 +150,6 @@
 	<script src="scripts/sha256.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-
 			$('#loginBtn').on('click', function() {
 				return loginCheck();
 			});
@@ -171,7 +171,8 @@
 					frm.userPwd.focus();
 					return false;
 				}
-				$('#inputPwd').val(SHA256($('#inputPwd').val()));
+				$('#hiddenPwd').val(SHA256($('#inputPwd').val())).attr('name', 'userPwd');
+				$('#inputPwd').removeAttr('name');
 				return true;
 			}
 

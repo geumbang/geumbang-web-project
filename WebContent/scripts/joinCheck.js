@@ -213,7 +213,9 @@ $(document)
 
 							return false;
 						}
-						$('#inputPassword').val(SHA256($('#inputPassword').val()));
+						$('#hiddenPwd').val(SHA256($('#inputPassword').val())).attr('name', 'userPwd');
+						$('#inputPassword').removeAttr('name');
+						
 					}
 
 				});

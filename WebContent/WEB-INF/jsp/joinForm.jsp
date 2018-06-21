@@ -192,6 +192,7 @@
 										name="userPwd" class="form-control" id="inputPassword"
 										placeholder="비밀번호를 입력해주세요" required>
 									<div id="pwdMsg" class="msg"></div>
+									<input type="hidden" id="hiddenPwd" class="form-control">
 								</div>
 
 
