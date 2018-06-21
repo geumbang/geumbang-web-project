@@ -51,23 +51,19 @@
 				<h2 class="h3 mb-3 font-weight-normal">KEUMBANG 회원이신가요?</h2>
 				<hr>
 				<div id="msgDiv" class="text-danger">${msg }</div>
-				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" id="inputEmail"
+				<label for="exampleInputEmail1">Email address</label> 
+				<input type="email" class="form-control" id="inputEmail"
 					aria-describedby="emailHelp" name="userEmail" required autofocus>
-				<br> <label for="exampleInputPassword1">Password</label> <input
-					type="password" class="form-control" id="inputPwd" name="userPwd"
-					required>
-
+				<br> 
+				<label for="exampleInputPassword1">Password</label> 
+				<input type="password" class="form-control" id="inputPwd" name="userPwd" required>
 				<div class="checkbox mb-3">
-					<label> <input type="checkbox" value="remember-me">
-						Remember me
-					</label>
+					<label> <input type="checkbox" value="remember-me">Remember me</label>
 				</div>
 				<div id="naverIdLogin"></div>
 				</br> <a id="kakao-login-btn"></a> <a
 					href="http://developers.kakao.com/logout"></a></br></br>
-				<button class="btn btn-lg btn-primary btn-block" type="submit"
-					id="loginBtn">로그인</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" id="loginBtn">로그인</button>
 				<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 
 			</form>
@@ -150,6 +146,7 @@
 		}
 		//]]>
 	</script>
+	<script src="scripts/sha256.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -174,7 +171,8 @@
 					frm.userPwd.focus();
 					return false;
 				}
-
+				$('#inputPwd').val(SHA256($('#inputPwd').val()));
+				return true;
 			}
 
 		});

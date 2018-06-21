@@ -149,10 +149,4 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:main.do";
 	}
-
-	@RequestMapping("myPage.do")
-	public String myPage(Model model, HttpSession session) {
-		model.addAttribute("userInfo", session.getAttribute("loginUser"));
-		return "myPage";
-	}
 }
