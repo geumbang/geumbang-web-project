@@ -36,7 +36,7 @@ public class MainController {
 	public ModelAndView index() {
 
 		Price goldPrice = pService.goldPrice();
-		List<String> goldPriceResult = pService.goldPriceResult();
+		List<Object> goldPriceResult = pService.goldPriceResult();
 
 		double exrate = foService.exrate();
 		

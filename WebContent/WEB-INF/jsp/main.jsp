@@ -7,13 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keumbang.com</title>
+<script src="scripts/countUp.js"></script>
 <link rel="stylesheet" href="css/reset.css">
-
 <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
 	rel="stylesheet">
-
 <link type="text/css" href="images/icons/css/font-awesome.css"
 	rel="stylesheet">
+
 <style>
 .gray {
 	color: gray;
@@ -53,22 +53,35 @@
 }
 
 .priceDiv {
-	height: 150px;
+	height: 170px;
+	text-align: center;
+	
 }
 
 .wonSpan {
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 480;
+	text-shadow: 0px 1px #ffffff, 1.5px 2px 0px #dad7d7;
 }
-
+  
 .title {
 	font-size: 24px;
 	font-weight: 500;
+
+	
+}
+
+.compare {
+	font-size: 14px;
+}
+
+.ngoldSpan{
+color :#FF9900;
 }
 </style>
+
 </head>
 <body>
-
 
 	<jsp:include page="header.jsp"></jsp:include>
 
@@ -87,6 +100,7 @@
 					<div
 						class="d-flex align-items-center p-2 my-3 bg-warning rounded box-shadow">
 
+
 						<div class="lh-100">
 							<h2 class="mb-0 lh-100">실시간 금시세</h2>
 							<small>&nbsp;실시간 금시세 ( 최근 업데이트 : <fmt:formatDate
@@ -94,40 +108,48 @@
 								)
 							</small>
 						</div>
-					</div>
-
+					</div>     
+   
 					<div class="btn-controls" id="realValDiv">
+						<input id="endVal1" type="hidden" value="${goldPriceResult[0]}">
+						<input id="endVal2" type="hidden" value="${goldPriceResult[2]}">
+						<input id="endVal3" type="hidden" value="${goldPriceResult[4]}">
 
 						<div class="btn-box-row row-fluid ">
 							<div class="btn-box big span4 bg-light rounded priceDiv">
-								<br> <span class="title">&nbsp;금(24K) /3.75g </span>
+								<br> <span class="title">&nbsp;금(<span class="ngoldSpan">24K</span>) /3.75g </span>
 								<hr class="border-secondary">
 								<p>
-									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[0]}
-										원</span> &nbsp;(전일대비 ${goldPriceResult[6]}원)
+									<span class="wonSpan">&nbsp;&#8361 <span id="countUp1">0</span>원
+									</span> <br>
+									<span class="compare">&nbsp;(전일대비
+										${goldPriceResult[6]}원)</span>
+								</p>
+							</div>
+
+
+							<div class="btn-box big span4 bg-light rounded priceDiv">
+								<br> <span class="title">&nbsp;금(<span class="ngoldSpan">18K</span>) /3.75g </span>
+								<hr class="border-secondary">
+								<p>
+									<span class="wonSpan">&nbsp;&#8361 <span id="countUp2">0</span>원
+									</span> <br>
+									<span class="compare"> &nbsp;(전일대비
+										${goldPriceResult[8]}원)</span>
 								</p>
 							</div>
 
 
 
 							<div class="btn-box big span4 bg-light rounded priceDiv">
-								<br> <span class="title">&nbsp;금(18K) /3.75g </span>
-								<hr class="border-secondary">
-								<p>
-									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[2]}
-										원</span> &nbsp;(전일대비 ${goldPriceResult[8]}원)
-								</p>
-							</div>
-
-
-
-							<div class="btn-box big span4 bg-light rounded priceDiv">
-								<br> <span class="title">&nbsp;금(14K) /3.75g </span>
+								<br> <span class="title">&nbsp;금(<span class="ngoldSpan">14K</span>) /3.75g </span>
 								<hr class="border-secondary">
 
 								<p>
-									<span class="wonSpan">&nbsp;&#8361 ${goldPriceResult[4]}
-										원</span> &nbsp;(전일대비 ${goldPriceResult[10]}원)
+									<span class="wonSpan">&nbsp;&#8361 <span id="countUp3">0</span>원
+									</span> <br>
+									<span class="compare"> &nbsp;(전일대비
+										${goldPriceResult[10]}원)</span>
 								</p>
 
 
@@ -151,7 +173,7 @@
 						<div class="lh-100">
 							<h2 class="mb-0 lh-100">
 								금 국제시세 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;
@@ -204,7 +226,7 @@
 
 		</div>
 		<!--/.container-->
-
+    
 		<div class="hideDiv"></div>
 
 
@@ -214,10 +236,6 @@
 		<jsp:include page="footer.jsp"></jsp:include>
 
 		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-		<script src="scripts/jquery-ui-1.10.1.custom.min.js"
-			type="text/javascript"></script>
-
 		<script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
 		<script src="scripts/moment.js" type="text/javascript"></script>
 		<script src="scripts/flot/jquery.flot.resize.js"
@@ -228,6 +246,26 @@
 		<script type="text/javascript"
 			src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
 			charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document)
+					.ready(
+							function() {
+
+								for (var i = 1; i < 4; i++) {
+									var countUp = document
+											.getElementById("countUp" + i);
+									var endVal = document
+											.getElementById("endVal" + i).value;
+									var numAnim = new CountUp(countUp,
+											100000.00, endVal, 2, 3);
+									numAnim.start(function() {
+										numAnim.update(endVal);
+									});
+								}
+
+							});
+		</script>
+
 		<script>
 			$(function() {
 				$('a[href*="#"]:not([href="#"])')
@@ -249,6 +287,7 @@
 										}
 									}
 								});
+
 			});
 		</script>
 </body>

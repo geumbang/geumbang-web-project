@@ -26,7 +26,7 @@ public class PriceService implements IPriceService {
 	}
 
 	@Override
-	public List<String> goldPriceResult() {
+	public List<Object> goldPriceResult() {
 		// TODO Auto-generated method stub
 		List<Price> goldPriceAll = pDao.selectAllPrice();
 		int g_id = goldPriceAll.size();
@@ -59,12 +59,12 @@ public class PriceService implements IPriceService {
 
 		DecimalFormat df = new DecimalFormat("#,##0.00");
 
-		String gold24Buy1 = df.format(gold24Buy);
-		String gold24Sell1 = df.format(gold24Sell);
-		String gold18Buy1 = df.format(gold18Buy);
-		String gold18Sell1 = df.format(gold18Sell);
-		String gold14Buy1 = df.format(gold14Buy);
-		String gold14Sell1 = df.format(gold14Sell);
+//		String gold24Buy1 = df.format(gold24Buy);
+//		String gold24Sell1 = df.format(gold24Sell);
+//		String gold18Buy1 = df.format(gold18Buy);
+//		String gold18Sell1 = df.format(gold18Sell);
+//		String gold14Buy1 = df.format(gold14Buy);
+//		String gold14Sell1 = df.format(gold14Sell);
 
 		String gold24BuyChangeStr = null;
 		if (gold24BuyChange < 0) {
@@ -108,13 +108,29 @@ public class PriceService implements IPriceService {
 			gold14SellChangeStr = "+" + df.format(gold14SellChange);
 		}
 
-		List<String> goldPriceResult = new ArrayList<>();
-		goldPriceResult.add(gold24Buy1);
-		goldPriceResult.add(gold24Sell1);
-		goldPriceResult.add(gold18Buy1);
-		goldPriceResult.add(gold18Sell1);
-		goldPriceResult.add(gold14Buy1);
-		goldPriceResult.add(gold14Sell1);
+//		List<Object> goldPriceResult = new ArrayList<>();
+//		goldPriceResult.add(gold24Buy1);
+//		goldPriceResult.add(gold24Sell1);
+//		goldPriceResult.add(gold18Buy1);
+//		goldPriceResult.add(gold18Sell1);
+//		goldPriceResult.add(gold14Buy1);
+//		goldPriceResult.add(gold14Sell1);
+//		goldPriceResult.add(gold24BuyChangeStr);
+//		goldPriceResult.add(gold24SellChangeStr);
+//		goldPriceResult.add(gold18BuyChangeStr);
+//		goldPriceResult.add(gold18SellChangeStr);
+//		goldPriceResult.add(gold14BuyChangeStr);
+//		goldPriceResult.add(gold14SellChangeStr);
+//
+
+
+		List<Object> goldPriceResult = new ArrayList<>();
+		goldPriceResult.add(gold24Buy);
+		goldPriceResult.add(gold24Sell);
+		goldPriceResult.add(gold18Buy);
+		goldPriceResult.add(gold18Sell);
+		goldPriceResult.add(gold14Buy);
+		goldPriceResult.add(gold14Sell);
 		goldPriceResult.add(gold24BuyChangeStr);
 		goldPriceResult.add(gold24SellChangeStr);
 		goldPriceResult.add(gold18BuyChangeStr);
@@ -122,7 +138,7 @@ public class PriceService implements IPriceService {
 		goldPriceResult.add(gold14BuyChangeStr);
 		goldPriceResult.add(gold14SellChangeStr);
 
-		return goldPriceResult;
+	return goldPriceResult;
 	}
 
 	@Override
