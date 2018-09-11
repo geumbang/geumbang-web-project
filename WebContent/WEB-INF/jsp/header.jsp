@@ -27,69 +27,26 @@
 	integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 	crossorigin="anonymous"></script>
 <title>금방</title>
+<link rel="stylesheet" href="css/reset.css">
 </head>
-
-<style>
-</style>
-<body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a
-		class="navbar-brand" href="main.do"> &nbsp; <img
-		src="images/goldImg.png" width="30" height="30" alt="">
-		Keumbang.com
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse"
-		data-target="#navbarsExample05" aria-controls="navbarsExample05"
-		aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarsExample05">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link"
-				href="forecast.do">예측시세 <span class="sr-only">(current)</span>
-			</a></li>
-			<li class="nav-item"><a class="nav-link" href="history.do">신뢰도</a></li>
-			<li class="nav-item"><a class="nav-link" href="payment.do">상품구매</a></li>
-			
-
-
-
-		</ul>
-		<form class="form-inline my-2 my-md-0">
+<body class="pd-0">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"> 
+		<a class="navbar-brand my-2 my-lg-0" href="main.do"><img src="images/goldImg.png" width="28" height="28" alt=""></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navTop" aria-controls="navTop"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navTop">
 			<ul class="navbar-nav mr-auto">
-				<c:choose>
-					<c:when test="${empty loginUser }">
-						<li class="nav-item navbar-right"><a class="nav-link"
-							href="joinForm.do">회원가입</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="myPage.do">${loginUser.userName }
-								님 </a></li>
-
-					</c:otherwise>
-				</c:choose>
-
-				<c:choose>
-					<c:when test="${empty loginUser }">
-						<li class="nav-item"><a class="nav-link" href="loginForm.do">로그인</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="logout.do">로그아웃</a></li>
-					</c:otherwise>
-				</c:choose>
-
-			</ul>
-
-		</form>
-	</div>
+				<li class="nav-item active"><a class="nav-link"
+					href="main.do">예측시세<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item disabled"><a class="nav-link" href="#">정확도 리포트</a></li>
+			</ul>	
+			<a class="btn btn-outline-light my-2 my-lg-0" href="http://keumbang.com">GO KEUMBANG!</a>
+		</div>
 	</nav>
 
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
 </body>
-
-
 </html>

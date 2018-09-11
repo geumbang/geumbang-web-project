@@ -13,34 +13,6 @@
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	<mvc:annotation-driven></mvc:annotation-driven>
-	<mvc:interceptors>
-
-	 <mvc:interceptor>
-			<mvc:mapping path="/**" />
-			<mvc:mapping path="/loginForm.do" />
-			<mvc:exclude-mapping path="/main.do" />
-			<mvc:exclude-mapping path="/main_ajax.do" />
-			<mvc:exclude-mapping path="/loginForm.do" />
-			<mvc:exclude-mapping path="/login.do" />
-			<mvc:exclude-mapping path="/joinForm.do" />
-			<mvc:exclude-mapping path="/join.do" />
-			<mvc:exclude-mapping path="/isExistMember.do" />
-			<mvc:exclude-mapping path="/joinMember.do" />
-			<mvc:exclude-mapping path="/joinSuccess.do" />
-			<mvc:exclude-mapping path="/callback.do" />
-			<mvc:exclude-mapping path="/loginNaver.do" />
-			<mvc:exclude-mapping path="/loginKakao.do" />
-			<mvc:exclude-mapping path="/callbackKakao.do" />
-			<mvc:exclude-mapping path="/myPage.do"/>
-			<mvc:exclude-mapping path="/loginByOauth.do"/>
-			<mvc:exclude-mapping path="/logoutKakao.do"/>
-			
-		
-			<ref bean="loginCheckInterceptor" />
-			<!-- <bean class="controller.LoginCheckInterceptor"></bean> -->
-		</mvc:interceptor> 
-		 
-	</mvc:interceptors>
+	<mvc:annotation-driven></mvc:annotation-driven> 
 		
 </beans>
